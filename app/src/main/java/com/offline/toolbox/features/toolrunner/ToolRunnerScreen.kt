@@ -144,6 +144,21 @@ import com.offline.toolbox.tools.security.HmacGeneratorTool
 import com.offline.toolbox.tools.security.RsaKeyPairTool
 import com.offline.toolbox.tools.text.LeetspeakTool
 import com.offline.toolbox.tools.text.TextBinaryHexTool
+import com.offline.toolbox.tools.color.HtmlColorNameTool
+import com.offline.toolbox.tools.data.JsonDiffTool
+import com.offline.toolbox.tools.data.NdjsonToJsonArrayTool
+import com.offline.toolbox.tools.developer.IPv6SubnetCalculatorTool
+import com.offline.toolbox.tools.developer.PortLookupTool
+import com.offline.toolbox.tools.math.DenominationCalculatorTool
+import com.offline.toolbox.tools.math.PrimeFactorizationTool
+import com.offline.toolbox.tools.math.ScientificNotationTool
+import com.offline.toolbox.tools.media.DpiDensityCalculatorTool
+import com.offline.toolbox.tools.media.FrequencyToNoteTool
+import com.offline.toolbox.tools.security.BcryptWorkFactorTool
+import com.offline.toolbox.tools.security.SymmetricCipherTool
+import com.offline.toolbox.tools.text.AnagramSolverTool
+import com.offline.toolbox.tools.text.TextWrapTool
+import com.offline.toolbox.tools.text.ZalgoTextTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1178,6 +1193,156 @@ fun ToolRunnerScreen(
                     onOutputChange = { out ->
                         outputText = out
                         executionSummary = "Pipeline executed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is IPv6SubnetCalculatorTool -> {
+                IPv6SubnetCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "IPv6 subnet analyzed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is PortLookupTool -> {
+                PortLookupToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Port directory queried"
+                        errorMessage = null
+                    }
+                )
+            }
+            is SymmetricCipherTool -> {
+                SymmetricCipherToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Cipher payload processed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is BcryptWorkFactorTool -> {
+                BcryptWorkFactorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Bcrypt work factor audited"
+                        errorMessage = null
+                    }
+                )
+            }
+            is JsonDiffTool -> {
+                JsonDiffToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "JSON delta computed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is NdjsonToJsonArrayTool -> {
+                NdjsonToJsonArrayToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "NDJSON / Array converted"
+                        errorMessage = null
+                    }
+                )
+            }
+            is ScientificNotationTool -> {
+                ScientificNotationToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Scientific notation converted"
+                        errorMessage = null
+                    }
+                )
+            }
+            is DenominationCalculatorTool -> {
+                DenominationCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Denominations calculated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is PrimeFactorizationTool -> {
+                PrimeFactorizationToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Prime factorization completed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is TextWrapTool -> {
+                TextWrapToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Text wrapped & formatted"
+                        errorMessage = null
+                    }
+                )
+            }
+            is ZalgoTextTool -> {
+                ZalgoTextToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Zalgo effect applied"
+                        errorMessage = null
+                    }
+                )
+            }
+            is AnagramSolverTool -> {
+                AnagramSolverToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Anagram audit completed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is FrequencyToNoteTool -> {
+                FrequencyToNoteToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Acoustic note tuned"
+                        errorMessage = null
+                    }
+                )
+            }
+            is DpiDensityCalculatorTool -> {
+                DpiDensityCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "DPI density calculated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is HtmlColorNameTool -> {
+                HtmlColorNameToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Color matched"
                         errorMessage = null
                     }
                 )

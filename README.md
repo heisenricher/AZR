@@ -1,8 +1,8 @@
 # AZR — Offline Android Utility Toolbox
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
-[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-191%20Passed-brightgreen.svg)](#automated-testing--quality)
-[![Tools Count](https://img.shields.io/badge/Utilities-75%20Tools-blue.svg)](#utility-catalog-75-tools)
+[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-233%20Passed-brightgreen.svg)](#automated-testing--quality)
+[![Tools Count](https://img.shields.io/badge/Utilities-90%20Tools-blue.svg)](#utility-catalog-90-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
 
@@ -12,20 +12,22 @@
 
 ## Key Highlights
 
-- **75 Production-Grade Utilities**: Expanded coverage across Networking, Cryptography, Media, Finance, Data Formats, Text Operations, and Unit Converters.
+- **90 Production-Grade Utilities**: Expanded coverage across IPv6/IPv4 Networking, IANA Port Intelligence, Authenticated Symmetric Cryptography, Bcrypt Cost Analysis, Structural Tree Diffing, Scientific Exponents, Cash Registers, Acoustic Note Tuners, Screen Density Scaling, and CSS Colors.
 - **Multi-Tool Pipeline Chaining Engine (`PipelineEngine`)**: Execute multi-step sequential transformations (e.g. `Clean -> Case Convert -> Base64 -> Hash`) in a single atomic pass with intermediate audit trails.
 - **Zero Network Guarantee**: Absolutely **NO** `android.permission.INTERNET` in `AndroidManifest.xml`. No telemetry, no cloud analytics, no remote SDKs.
-- **On-Device Cryptography**: Full support for RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC signatures, and multi-algorithm hashing entirely on-device.
+- **On-Device Cryptography**: Full support for AES-256-GCM / CBC authenticated encryption with PBKDF2, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC signatures, and multi-algorithm hashing entirely on-device.
 - **OWASP Path Traversal Defenses**: Built-in protection against Zip Slip and directory traversal attacks during local archive inspection and extraction.
 - **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion.
-- **191 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
+- **233 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
 
 ---
 
-## Utility Catalog (75 Tools)
+## Utility Catalog (90 Tools)
 
-### 1. Developer & Network Tools (17 Tools)
+### 1. Developer & Network Tools (19 Tools)
 - **Multi-Tool Pipeline Chainer**: Chain multiple offline text, crypto, and developer transformations into an atomic sequential pipeline with an audit trail.
+- **IPv6 Subnet & Address Analyzer**: RFC 5952 canonical compression, full expansion, CIDR prefix subnetting, address scope classification (Loopback, Link-Local, Unique Local, Global Unicast, Multicast).
+- **IANA Network Port & Protocol Directory**: Offline directory of standard IANA network ports, transport protocols (TCP/UDP), and security risk audit notes.
 - **IPv4 Subnet & CIDR Calculator**: Calculate network addresses, broadcast IPs, usable host ranges, wildcard masks, and CIDR subnet details.
 - **MAC Address Formatter & Inspector**: Normalize MAC addresses across 4 notations (colon, hyphen, Cisco dot, raw), check multicast/local bits, and identify OUI vendors.
 - **Cron Expression Explainer & Schedule Simulator**: Translate 5-field cron schedules into plain English and project upcoming run times.
@@ -43,7 +45,9 @@
 - **Markdown Text Inspector**: Word, character, and line counts with markdown structural summaries.
 - **HTML to Markdown Converter**: Convert HTML markup into clean, readable GitHub-Flavored Markdown offline.
 
-### 2. Security & Privacy (7 Tools)
+### 2. Security & Privacy (9 Tools)
+- **AES-GCM Authenticated Encryption**: On-device authenticated symmetric encryption (AES-256-GCM / CBC) with PBKDF2 key derivation and random salt/IV envelope.
+- **Bcrypt Work Factor & Hash Analyzer**: Decompose bcrypt hash structures, inspect iteration work factors, and evaluate offline cracking resistance.
 - **HMAC Message Authentication Generator**: Calculate cryptographic HMAC-SHA256, HMAC-SHA512, HMAC-SHA1, and HMAC-MD5 signatures with text or hex secret keys.
 - **RSA Key Pair & PEM Generator**: Generate on-device RSA 1024, 2048, and 4096-bit public/private key pairs with standard PKCS#8 / X.509 PEM export.
 - **Cryptographic Hash Generator**: MD5, SHA-1, SHA-256, SHA-384, and SHA-512 with uppercase/lowercase hex toggles.
@@ -52,23 +56,31 @@
 - **Password Strength Evaluator**: Offline entropy calculation, zxcvbn-inspired pattern scoring, crack time estimates, and actionable improvement tips.
 - **UUID / GUID v4 Generator**: Generate single or batch cryptographically random UUID v4 identifiers with uppercase and hyphen toggles.
 
-### 3. Data & Formats (5 Tools)
+### 3. Data & Formats (7 Tools)
+- **JSON Structural Tree Diff & Patch**: Compare two JSON payloads structurally to detect additions, deletions, replacements, and generate RFC 6902 JSON Patch.
+- **NDJSON / JSON Lines Converter**: Bi-directional conversion between newline-delimited JSON (NDJSON/JSONL) streams and standard JSON arrays.
 - **YAML <-> JSON Converter**: Bi-directional conversion between YAML documents and structured JSON payloads offline.
 - **CSV Data Profiler & Column Statistics**: Analyze CSV datasets with column data type inference, null counts, unique cardinality, and numeric averages.
 - **CSV to JSON Converter**: Parse delimiter-separated values into formatted JSON arrays.
 - **JSON to CSV Converter**: Flatten JSON object arrays into standard comma-separated tabular data.
 - **CSV Filter, Query & Sort Engine**: Query and filter CSV rows by numeric and text conditions, sort columns, deduplicate, and reshape datasets.
 
-### 4. Color & Design (2 Tools)
+### 4. Color & Design (3 Tools)
+- **CSS & HTML Named Color Matcher**: Lookup 140+ official W3C/CSS named colors and 3D Euclidean color distance matching for nearest named color discovery.
 - **Harmonious Color Palette Generator**: Generate complementary, triadic, analogous, tetradic, split-complementary, and monochromatic color palettes in HSL space.
 - **Color Converter & WCAG Contrast Checker**: Convert across HEX, RGB, and HSL formats with WCAG 2.1 AA/AAA contrast ratio compliance evaluation.
 
-### 5. Image, Media & Forensics (3 Tools)
+### 5. Image, Media & Forensics (5 Tools)
+- **Audio Frequency & Musical Note Tuner**: Translate acoustic frequency in Hertz (Hz) to musical note names, octaves, MIDI numbers, and pitch cents tuning offsets.
+- **Screen DPI & Android Density Bucket Scaler**: Calculate PPI/DPI from screen resolution and diagonal, classify Android density buckets (mdpi to xxxhdpi), and convert dp <-> px.
 - **Aspect Ratio & Resolution Scaler**: Calculate aspect ratios (16:9, 4:3, 21:9, etc.), detect display standards (Full HD, 4K UHD), and scale dimensions proportionally.
 - **EXIF Metadata & Privacy Inspector**: Decode hidden camera EXIF tags, capture timestamps, device models, and detect GPS privacy leaks in photos.
 - **Offline QR Code Matrix Generator**: Generate 2D QR code binary matrices, ASCII art representations, and SVG vector graphics offline (ISO/IEC 18004).
 
-### 6. Math, Finance & Everyday Calculations (10 Tools)
+### 6. Math, Finance & Everyday Calculations (13 Tools)
+- **Scientific & Engineering Notation**: Convert numbers across Standard Decimal, Scientific, Engineering, and SI Metric prefixes (Giga, Mega, Micro, Nano).
+- **Cash Denomination & Register Splitter**: Breakdown total cash amounts into optimal note and coin denominations across USD, EUR, GBP, and INR.
+- **Prime Factorization & Divisors**: Decompose numbers into prime factor powers, test primality, list all divisors, and compute Euler's totient.
 - **Fuel Cost & Road Trip Splitter**: Calculate vehicle fuel consumption, road trip expenses, cost per mile/km, and split among passengers.
 - **GPA & Academic Grade Calculator**: Calculate semester GPA, cumulative CGPA, credit-weighted averages, and honors status across 4.0, 5.0, and 10.0 scales.
 - **Loan EMI & Amortization Calculator**: Calculate monthly loan EMIs, interest breakdowns, prepayment savings, and month-by-month amortization schedules.
@@ -80,7 +92,10 @@
 - **Compound Interest Calculator**: Future value projections, compound frequencies (daily, monthly, quarterly, annually), and interest earned.
 - **Discount & Sales Tax Calculator**: Calculate final discounted prices with sales tax additions and savings breakdowns.
 
-### 7. Text & Writing (13 Tools)
+### 7. Text & Writing (16 Tools)
+- **Word Wrap & Paragraph Reflower**: Wrap text to specific column widths (72, 80, 100) with custom line prefixes, margins, and hanging indents.
+- **Zalgo Glitch Text & Sanitizer**: Generate chaotic cursed glitch text using Unicode combining diacritics, or sanitize and strip existing zalgo artifacts.
+- **Anagram & Palindrome Solver**: Verify anagrams, detect palindromes, inspect letter frequency signatures, and generate permutations.
 - **Binary & Hex Multi-Stream Converter**: Simultaneous multi-representation stream converter between Text, 8-bit Binary, Hex, and Decimal bytes.
 - **Leetspeak Generator & Decoder**: Transforms text into hacker leetspeak (1337) across Basic, Intermediate, and Advanced symbol levels, with decoding support.
 - **Text Case Converter**: Sentence case, lowercase, UPPERCASE, Title Case, camelCase, snake_case, kebab-case, and CONSTANT_CASE.
@@ -157,7 +172,7 @@ Each execution pass captures an audit log of intermediate execution outputs, ste
 
 ## Automated Testing & Quality
 
-All 75 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
+All 90 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
 
 ```bash
 # Run all unit tests
@@ -165,8 +180,8 @@ All 75 utilities and engine subsystems are verified with automated unit tests co
 ```
 
 **Results:**
-- **191 tests completed**
-- **191 tests passed**
+- **233 tests completed**
+- **233 tests passed**
 - **0 failures, 0 skipped (100% pass rate)**
 
 ---

@@ -79,6 +79,21 @@ import com.offline.toolbox.tools.security.HmacGeneratorTool
 import com.offline.toolbox.tools.security.RsaKeyPairTool
 import com.offline.toolbox.tools.text.LeetspeakTool
 import com.offline.toolbox.tools.text.TextBinaryHexTool
+import com.offline.toolbox.tools.developer.IPv6SubnetCalculatorTool
+import com.offline.toolbox.tools.developer.PortLookupTool
+import com.offline.toolbox.tools.security.SymmetricCipherTool
+import com.offline.toolbox.tools.security.BcryptWorkFactorTool
+import com.offline.toolbox.tools.data.JsonDiffTool
+import com.offline.toolbox.tools.data.NdjsonToJsonArrayTool
+import com.offline.toolbox.tools.math.ScientificNotationTool
+import com.offline.toolbox.tools.math.DenominationCalculatorTool
+import com.offline.toolbox.tools.math.PrimeFactorizationTool
+import com.offline.toolbox.tools.text.TextWrapTool
+import com.offline.toolbox.tools.text.ZalgoTextTool
+import com.offline.toolbox.tools.text.AnagramSolverTool
+import com.offline.toolbox.tools.media.FrequencyToNoteTool
+import com.offline.toolbox.tools.media.DpiDensityCalculatorTool
+import com.offline.toolbox.tools.color.HtmlColorNameTool
 
 /**
  * Central registry that indexes all available offline utilities.
@@ -203,6 +218,34 @@ object ToolRegistry {
         // Text & Encoding
         register(TextBinaryHexTool())
         register(LeetspeakTool())
+
+        // Phase 6 Additions (90 Tools Milestone)
+        // Developer & Network
+        register(IPv6SubnetCalculatorTool())
+        register(PortLookupTool())
+
+        // Security & Cryptography
+        register(SymmetricCipherTool())
+        register(BcryptWorkFactorTool())
+
+        // Data & Formats
+        register(JsonDiffTool())
+        register(NdjsonToJsonArrayTool())
+
+        // Math, Science & Finance
+        register(ScientificNotationTool())
+        register(DenominationCalculatorTool())
+        register(PrimeFactorizationTool())
+
+        // Text & Writing
+        register(TextWrapTool())
+        register(ZalgoTextTool())
+        register(AnagramSolverTool())
+
+        // Media, Color & Acoustics
+        register(FrequencyToNoteTool())
+        register(DpiDensityCalculatorTool())
+        register(HtmlColorNameTool())
     }
 
     fun register(tool: Tool<*, *>) {
