@@ -124,6 +124,21 @@ import com.offline.toolbox.tools.text.MarkdownTableFormatterTool
 import com.offline.toolbox.tools.text.StringSimilarityTool
 import com.offline.toolbox.tools.color.WcagApcaContrastTool
 import com.offline.toolbox.tools.media.AudioFrequencyIntervalTool
+import com.offline.toolbox.tools.developer.CurlCommandParserTool
+import com.offline.toolbox.tools.developer.BgpAsnLookupTool
+import com.offline.toolbox.tools.developer.GitIgnoreGeneratorTool
+import com.offline.toolbox.tools.developer.CrontabScheduleDiffTool
+import com.offline.toolbox.tools.security.HkdfKeyDerivationTool
+import com.offline.toolbox.tools.security.VigenereCipherTool
+import com.offline.toolbox.tools.data.CsvToJsonSchemaTool
+import com.offline.toolbox.tools.data.BinarySearchTreeVisualizerTool
+import com.offline.toolbox.tools.math.LoanRefinanceComparatorTool
+import com.offline.toolbox.tools.math.TrigonometricFunctionsTool
+import com.offline.toolbox.tools.math.ScientificConstantsTool
+import com.offline.toolbox.tools.text.ReadabilityScoreTool
+import com.offline.toolbox.tools.text.TextJustifierTool
+import com.offline.toolbox.tools.color.ColorTemperatureTool
+import com.offline.toolbox.tools.media.AudioDecibelCalculatorTool
 
 /**
  * Central registry that indexes all available offline utilities.
@@ -332,6 +347,34 @@ object ToolRegistry {
         // Media, Color & Acoustics
         register(WcagApcaContrastTool())
         register(AudioFrequencyIntervalTool())
+
+        // --- Phase 9: The Apex Zenith (135 Tools Milestone) ---
+        // Developer & Cloud/DevOps
+        register(CurlCommandParserTool())
+        register(BgpAsnLookupTool())
+        register(GitIgnoreGeneratorTool())
+        register(CrontabScheduleDiffTool())
+
+        // Security & Cryptography
+        register(HkdfKeyDerivationTool())
+        register(VigenereCipherTool())
+
+        // Data & Formats
+        register(CsvToJsonSchemaTool())
+        register(BinarySearchTreeVisualizerTool())
+
+        // Math, Finance & Science
+        register(LoanRefinanceComparatorTool())
+        register(TrigonometricFunctionsTool())
+        register(ScientificConstantsTool())
+
+        // Text & Typography
+        register(ReadabilityScoreTool())
+        register(TextJustifierTool())
+
+        // Media, Color & Acoustics
+        register(ColorTemperatureTool())
+        register(AudioDecibelCalculatorTool())
     }
 
     fun register(tool: Tool<*, *>) {

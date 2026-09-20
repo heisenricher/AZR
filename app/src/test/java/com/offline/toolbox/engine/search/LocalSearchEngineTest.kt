@@ -61,4 +61,22 @@ class LocalSearchEngineTest {
         val pdfResults = LocalSearchEngine.search("pdf")
         assertTrue("Searching 'pdf' should find PDF generator tool", pdfResults.any { it.tool.metadata.id == "pdf_generator_tool" })
     }
+
+    @Test
+    fun testPhase9ApexZenithRegistryAndAliases() {
+        val all = ToolRegistry.getAllTools()
+        assertTrue("Total registered tools should be at least 135 (currently ${all.size})", all.size >= 135)
+
+        val curlResults = LocalSearchEngine.search("curl")
+        assertTrue("Searching 'curl' should find curl parser tool", curlResults.any { it.tool.metadata.id == "curl_command_parser_tool" })
+
+        val asnResults = LocalSearchEngine.search("asn")
+        assertTrue("Searching 'asn' should find BGP ASN tool", asnResults.any { it.tool.metadata.id == "bgp_asn_lookup_tool" })
+
+        val hkdfResults = LocalSearchEngine.search("hkdf")
+        assertTrue("Searching 'hkdf' should find HKDF tool", hkdfResults.any { it.tool.metadata.id == "hkdf_key_derivation_tool" })
+
+        val refinanceResults = LocalSearchEngine.search("refinance")
+        assertTrue("Searching 'refinance' should find Loan Refinance tool", refinanceResults.any { it.tool.metadata.id == "loan_refinance_comparator_tool" })
+    }
 }

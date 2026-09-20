@@ -189,6 +189,21 @@ import com.offline.toolbox.tools.text.MarkdownTableFormatterTool
 import com.offline.toolbox.tools.text.StringSimilarityTool
 import com.offline.toolbox.tools.color.WcagApcaContrastTool
 import com.offline.toolbox.tools.media.AudioFrequencyIntervalTool
+import com.offline.toolbox.tools.developer.CurlCommandParserTool
+import com.offline.toolbox.tools.developer.BgpAsnLookupTool
+import com.offline.toolbox.tools.developer.GitIgnoreGeneratorTool
+import com.offline.toolbox.tools.developer.CrontabScheduleDiffTool
+import com.offline.toolbox.tools.security.HkdfKeyDerivationTool
+import com.offline.toolbox.tools.security.VigenereCipherTool
+import com.offline.toolbox.tools.data.CsvToJsonSchemaTool
+import com.offline.toolbox.tools.data.BinarySearchTreeVisualizerTool
+import com.offline.toolbox.tools.math.LoanRefinanceComparatorTool
+import com.offline.toolbox.tools.math.TrigonometricFunctionsTool
+import com.offline.toolbox.tools.math.ScientificConstantsTool
+import com.offline.toolbox.tools.text.ReadabilityScoreTool
+import com.offline.toolbox.tools.text.TextJustifierTool
+import com.offline.toolbox.tools.color.ColorTemperatureTool
+import com.offline.toolbox.tools.media.AudioDecibelCalculatorTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1655,6 +1670,141 @@ fun ToolRunnerScreen(
             }
             is AudioFrequencyIntervalTool -> {
                 AudioFrequencyIntervalUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is CurlCommandParserTool -> {
+                CurlCommandParserUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BgpAsnLookupTool -> {
+                BgpAsnLookupUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is GitIgnoreGeneratorTool -> {
+                GitIgnoreGeneratorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is CrontabScheduleDiffTool -> {
+                CrontabScheduleDiffUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is HkdfKeyDerivationTool -> {
+                HkdfKeyDerivationUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is VigenereCipherTool -> {
+                VigenereCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is CsvToJsonSchemaTool -> {
+                CsvToJsonSchemaUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BinarySearchTreeVisualizerTool -> {
+                BinarySearchTreeVisualizerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is LoanRefinanceComparatorTool -> {
+                LoanRefinanceComparatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is TrigonometricFunctionsTool -> {
+                TrigonometricFunctionsUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ScientificConstantsTool -> {
+                ScientificConstantsUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ReadabilityScoreTool -> {
+                ReadabilityScoreUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is TextJustifierTool -> {
+                TextJustifierUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorTemperatureTool -> {
+                ColorTemperatureUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is AudioDecibelCalculatorTool -> {
+                AudioDecibelCalculatorUI(
                     onResultUpdated = { report, summary ->
                         outputText = report
                         executionSummary = summary
