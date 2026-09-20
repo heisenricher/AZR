@@ -94,6 +94,21 @@ import com.offline.toolbox.tools.text.AnagramSolverTool
 import com.offline.toolbox.tools.media.FrequencyToNoteTool
 import com.offline.toolbox.tools.media.DpiDensityCalculatorTool
 import com.offline.toolbox.tools.color.HtmlColorNameTool
+import com.offline.toolbox.tools.developer.UserAgentParserTool
+import com.offline.toolbox.tools.developer.SemVerComparatorTool
+import com.offline.toolbox.tools.developer.ChmodPermissionsCalculatorTool
+import com.offline.toolbox.tools.developer.HttpHeaderInspectorTool
+import com.offline.toolbox.tools.security.TotpGeneratorTool
+import com.offline.toolbox.tools.security.PassphraseDicewareTool
+import com.offline.toolbox.tools.data.JsonPathEvaluatorTool
+import com.offline.toolbox.tools.data.TsvToCsvTool
+import com.offline.toolbox.tools.math.MatrixCalculatorTool
+import com.offline.toolbox.tools.math.StatisticsDistributionTool
+import com.offline.toolbox.tools.math.CompoundAnnualGrowthRateTool
+import com.offline.toolbox.tools.text.TextCaseInspectorTool
+import com.offline.toolbox.tools.text.NatoPhoneticTool
+import com.offline.toolbox.tools.media.BpmTapperTool
+import com.offline.toolbox.tools.color.ColorBlindnessSimulatorTool
 
 /**
  * Central registry that indexes all available offline utilities.
@@ -246,6 +261,34 @@ object ToolRegistry {
         register(FrequencyToNoteTool())
         register(DpiDensityCalculatorTool())
         register(HtmlColorNameTool())
+
+        // Phase 7 Additions (105 Tools Milestone - The Grand Century)
+        // Developer & System Administration
+        register(UserAgentParserTool())
+        register(SemVerComparatorTool())
+        register(ChmodPermissionsCalculatorTool())
+        register(HttpHeaderInspectorTool())
+
+        // Security & Privacy
+        register(TotpGeneratorTool())
+        register(PassphraseDicewareTool())
+
+        // Data & Formats
+        register(JsonPathEvaluatorTool())
+        register(TsvToCsvTool())
+
+        // Math, Science & Finance
+        register(MatrixCalculatorTool())
+        register(StatisticsDistributionTool())
+        register(CompoundAnnualGrowthRateTool())
+
+        // Text & Linguistics
+        register(TextCaseInspectorTool())
+        register(NatoPhoneticTool())
+
+        // Media, Audio & Color
+        register(BpmTapperTool())
+        register(ColorBlindnessSimulatorTool())
     }
 
     fun register(tool: Tool<*, *>) {

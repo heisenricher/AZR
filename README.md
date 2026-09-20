@@ -1,8 +1,8 @@
 # AZR — Offline Android Utility Toolbox
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
-[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-233%20Passed-brightgreen.svg)](#automated-testing--quality)
-[![Tools Count](https://img.shields.io/badge/Utilities-90%20Tools-blue.svg)](#utility-catalog-90-tools)
+[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-268%20Passed-brightgreen.svg)](#automated-testing--quality)
+[![Tools Count](https://img.shields.io/badge/Utilities-105%20Tools-blue.svg)](#utility-catalog-105-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
 
@@ -12,21 +12,26 @@
 
 ## Key Highlights
 
-- **90 Production-Grade Utilities**: Expanded coverage across IPv6/IPv4 Networking, IANA Port Intelligence, Authenticated Symmetric Cryptography, Bcrypt Cost Analysis, Structural Tree Diffing, Scientific Exponents, Cash Registers, Acoustic Note Tuners, Screen Density Scaling, and CSS Colors.
+- **105 Production-Grade Utilities**: Surpassing the century milestone with comprehensive offline tools across Networking, Cryptography, Linear Algebra, Statistics, Data Manipulation, Media, Audio, and Accessibility.
 - **Multi-Tool Pipeline Chaining Engine (`PipelineEngine`)**: Execute multi-step sequential transformations (e.g. `Clean -> Case Convert -> Base64 -> Hash`) in a single atomic pass with intermediate audit trails.
 - **Zero Network Guarantee**: Absolutely **NO** `android.permission.INTERNET` in `AndroidManifest.xml`. No telemetry, no cloud analytics, no remote SDKs.
-- **On-Device Cryptography**: Full support for AES-256-GCM / CBC authenticated encryption with PBKDF2, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC signatures, and multi-algorithm hashing entirely on-device.
+- **On-Device Cryptography**: Full support for RFC 6238 TOTP 2FA tokens, Diceware entropy generation, AES-256-GCM / CBC authenticated encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC signatures, and multi-algorithm hashing.
 - **OWASP Path Traversal Defenses**: Built-in protection against Zip Slip and directory traversal attacks during local archive inspection and extraction.
+- **Color Vision Deficiency (CVD) Simulation**: Real-time Vienot & Brettel matrices for Protanopia, Deuteranopia, Tritanopia, and Achromatopsia accessibility testing.
 - **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion.
-- **233 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
+- **268 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
 
 ---
 
-## Utility Catalog (90 Tools)
+## Utility Catalog (105 Tools)
 
-### 1. Developer & Network Tools (19 Tools)
+### 1. Developer & Network Tools (23 Tools)
+- **User-Agent Inspector & Device Classifier**: Offline User-Agent parser extracting browser family, rendering engine, OS, CPU architecture, and device class.
+- **Semantic Versioning Comparator & Range Evaluator**: SemVer 2.0.0 parser, prerelease/build comparator, npm range constraint checker (`^`, `~`), and next bump calculator.
+- **Unix Chmod Permissions & Octal Calculator**: Bidirectional converter between octal notation (`0755`) and symbolic flags (`rwxr-xr-x`) with SUID, SGID, and Sticky bit support.
+- **HTTP Response Header Parser & Security Auditor**: HTTP response header parser and security hygiene analyzer (HSTS, CSP, X-Frame-Options, MIME sniffing).
 - **Multi-Tool Pipeline Chainer**: Chain multiple offline text, crypto, and developer transformations into an atomic sequential pipeline with an audit trail.
-- **IPv6 Subnet & Address Analyzer**: RFC 5952 canonical compression, full expansion, CIDR prefix subnetting, address scope classification (Loopback, Link-Local, Unique Local, Global Unicast, Multicast).
+- **IPv6 Subnet & Address Analyzer**: RFC 5952 canonical compression, full expansion, CIDR prefix subnetting, and address scope classification.
 - **IANA Network Port & Protocol Directory**: Offline directory of standard IANA network ports, transport protocols (TCP/UDP), and security risk audit notes.
 - **IPv4 Subnet & CIDR Calculator**: Calculate network addresses, broadcast IPs, usable host ranges, wildcard masks, and CIDR subnet details.
 - **MAC Address Formatter & Inspector**: Normalize MAC addresses across 4 notations (colon, hyphen, Cisco dot, raw), check multicast/local bits, and identify OUI vendors.
@@ -45,7 +50,9 @@
 - **Markdown Text Inspector**: Word, character, and line counts with markdown structural summaries.
 - **HTML to Markdown Converter**: Convert HTML markup into clean, readable GitHub-Flavored Markdown offline.
 
-### 2. Security & Privacy (9 Tools)
+### 2. Security & Privacy (11 Tools)
+- **Time-Based One-Time Password Generator (RFC 6238 TOTP)**: Compute RFC 6238 TOTP and RFC 4226 HOTP verification codes with Base32 secret keys, custom time steps, and epoch offsets.
+- **Diceware Cryptographic Passphrase Generator**: Generate ultra-secure, human-memorable multi-word passphrases with simulated 5-dice rolls and entropy calculations.
 - **AES-GCM Authenticated Encryption**: On-device authenticated symmetric encryption (AES-256-GCM / CBC) with PBKDF2 key derivation and random salt/IV envelope.
 - **Bcrypt Work Factor & Hash Analyzer**: Decompose bcrypt hash structures, inspect iteration work factors, and evaluate offline cracking resistance.
 - **HMAC Message Authentication Generator**: Calculate cryptographic HMAC-SHA256, HMAC-SHA512, HMAC-SHA1, and HMAC-MD5 signatures with text or hex secret keys.
@@ -56,7 +63,9 @@
 - **Password Strength Evaluator**: Offline entropy calculation, zxcvbn-inspired pattern scoring, crack time estimates, and actionable improvement tips.
 - **UUID / GUID v4 Generator**: Generate single or batch cryptographically random UUID v4 identifiers with uppercase and hyphen toggles.
 
-### 3. Data & Formats (7 Tools)
+### 3. Data & Formats (9 Tools)
+- **JSONPath Query & Value Extractor**: Lightweight offline JSONPath query engine supporting dot/bracket notation, array wildcards (`[*]`), and index slicing (`[0]`).
+- **TSV <-> CSV Bi-Directional Converter**: Convert Tab-Separated Values into Comma-Separated Values and vice-versa with RFC 4180 quote escaping.
 - **JSON Structural Tree Diff & Patch**: Compare two JSON payloads structurally to detect additions, deletions, replacements, and generate RFC 6902 JSON Patch.
 - **NDJSON / JSON Lines Converter**: Bi-directional conversion between newline-delimited JSON (NDJSON/JSONL) streams and standard JSON arrays.
 - **YAML <-> JSON Converter**: Bi-directional conversion between YAML documents and structured JSON payloads offline.
@@ -65,19 +74,10 @@
 - **JSON to CSV Converter**: Flatten JSON object arrays into standard comma-separated tabular data.
 - **CSV Filter, Query & Sort Engine**: Query and filter CSV rows by numeric and text conditions, sort columns, deduplicate, and reshape datasets.
 
-### 4. Color & Design (3 Tools)
-- **CSS & HTML Named Color Matcher**: Lookup 140+ official W3C/CSS named colors and 3D Euclidean color distance matching for nearest named color discovery.
-- **Harmonious Color Palette Generator**: Generate complementary, triadic, analogous, tetradic, split-complementary, and monochromatic color palettes in HSL space.
-- **Color Converter & WCAG Contrast Checker**: Convert across HEX, RGB, and HSL formats with WCAG 2.1 AA/AAA contrast ratio compliance evaluation.
-
-### 5. Image, Media & Forensics (5 Tools)
-- **Audio Frequency & Musical Note Tuner**: Translate acoustic frequency in Hertz (Hz) to musical note names, octaves, MIDI numbers, and pitch cents tuning offsets.
-- **Screen DPI & Android Density Bucket Scaler**: Calculate PPI/DPI from screen resolution and diagonal, classify Android density buckets (mdpi to xxxhdpi), and convert dp <-> px.
-- **Aspect Ratio & Resolution Scaler**: Calculate aspect ratios (16:9, 4:3, 21:9, etc.), detect display standards (Full HD, 4K UHD), and scale dimensions proportionally.
-- **EXIF Metadata & Privacy Inspector**: Decode hidden camera EXIF tags, capture timestamps, device models, and detect GPS privacy leaks in photos.
-- **Offline QR Code Matrix Generator**: Generate 2D QR code binary matrices, ASCII art representations, and SVG vector graphics offline (ISO/IEC 18004).
-
-### 6. Math, Finance & Everyday Calculations (13 Tools)
+### 4. Math, Finance & Linear Algebra (16 Tools)
+- **Matrix Arithmetic & Determinant Calculator**: Compute determinant, inverse matrix, transpose, trace, and scalar multiplication for 2x2 and 3x3 matrices.
+- **Gaussian & Normal Distribution Calculator**: Calculate Probability Density Function (PDF), Cumulative Distribution Function (CDF), Z-score, and 95%/99% confidence intervals.
+- **Compound Annual Growth Rate (CAGR)**: Calculate annualized growth rate, absolute return percentage, net capital gains, and 10/20-year future compounding projections.
 - **Scientific & Engineering Notation**: Convert numbers across Standard Decimal, Scientific, Engineering, and SI Metric prefixes (Giga, Mega, Micro, Nano).
 - **Cash Denomination & Register Splitter**: Breakdown total cash amounts into optimal note and coin denominations across USD, EUR, GBP, and INR.
 - **Prime Factorization & Divisors**: Decompose numbers into prime factor powers, test primality, list all divisors, and compute Euler's totient.
@@ -92,7 +92,9 @@
 - **Compound Interest Calculator**: Future value projections, compound frequencies (daily, monthly, quarterly, annually), and interest earned.
 - **Discount & Sales Tax Calculator**: Calculate final discounted prices with sales tax additions and savings breakdowns.
 
-### 7. Text & Writing (16 Tools)
+### 5. Text, Writing & Phonetics (18 Tools)
+- **Text Case Style Detector & Tokenizer**: Identify identifier conventions (camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE) and extract word tokens.
+- **NATO & ICAO Radio Phonetic Alphabet**: Translate text into standard aviation/radio phonetic words (Alfa, Bravo, Charlie) and decode phonetics back to text.
 - **Word Wrap & Paragraph Reflower**: Wrap text to specific column widths (72, 80, 100) with custom line prefixes, margins, and hanging indents.
 - **Zalgo Glitch Text & Sanitizer**: Generate chaotic cursed glitch text using Unicode combining diacritics, or sanitize and strip existing zalgo artifacts.
 - **Anagram & Palindrome Solver**: Verify anagrams, detect palindromes, inspect letter frequency signatures, and generate permutations.
@@ -110,6 +112,20 @@
 - **ROT13 & Caesar Cipher**: Classic rotational substitution ciphers with customizable rotation offsets (1-25).
 - **Morse Code Translator & Timing Engine**: Bi-directional translation between text and International Morse Code with ITU-R timing unit calculations.
 - **ASCII Art Banner & Box Generator**: Generate large 5-row block font banners and decorative Unicode box borders (Single, Double, Rounded, ASCII).
+
+### 6. Media, Audio & Accessibility (6 Tools)
+- **Metronome & BPM Tempo Tapper**: Tap tempo calculator with Italian musical markings (Allegro, Andante, Presto) and note division intervals (1/4, 1/8, 1/16, triplets) in ms.
+- **Audio Frequency & Musical Note Tuner**: Translate acoustic frequency in Hertz (Hz) to musical note names, octaves, MIDI numbers, and pitch cents tuning offsets.
+- **Screen DPI & Android Density Bucket Scaler**: Calculate PPI/DPI from screen resolution and diagonal, classify Android density buckets (mdpi to xxxhdpi), and convert dp <-> px.
+- **Aspect Ratio & Resolution Scaler**: Calculate aspect ratios (16:9, 4:3, 21:9, etc.), detect display standards (Full HD, 4K UHD), and scale dimensions proportionally.
+- **EXIF Metadata & Privacy Inspector**: Decode hidden camera EXIF tags, capture timestamps, device models, and detect GPS privacy leaks in photos.
+- **Offline QR Code Matrix Generator**: Generate 2D QR code binary matrices, ASCII art representations, and SVG vector graphics offline (ISO/IEC 18004).
+
+### 7. Color & Design (4 Tools)
+- **Color Vision Deficiency & Accessibility Simulator**: Simulate Protanopia (red-blind), Deuteranopia (green-blind), Tritanopia (blue-blind), and Achromatopsia (monochromacy) via Vienot & Brettel matrices.
+- **CSS & HTML Named Color Matcher**: Lookup 140+ official W3C/CSS named colors and 3D Euclidean color distance matching for nearest named color discovery.
+- **Harmonious Color Palette Generator**: Generate complementary, triadic, analogous, tetradic, split-complementary, and monochromatic color palettes in HSL space.
+- **Color Converter & WCAG Contrast Checker**: Convert across HEX, RGB, and HSL formats with WCAG 2.1 AA/AAA contrast ratio compliance evaluation.
 
 ### 8. File Utilities & Forensics (3 Tools)
 - **ZIP Archiver & Security Inspector**: Create ZIP archives, inspect compression manifests, and validate against NIST/OWASP Zip Slip path traversal vulnerabilities.
@@ -172,7 +188,7 @@ Each execution pass captures an audit log of intermediate execution outputs, ste
 
 ## Automated Testing & Quality
 
-All 90 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
+All 105 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
 
 ```bash
 # Run all unit tests
@@ -180,8 +196,8 @@ All 90 utilities and engine subsystems are verified with automated unit tests co
 ```
 
 **Results:**
-- **233 tests completed**
-- **233 tests passed**
+- **268 tests completed**
+- **268 tests passed**
 - **0 failures, 0 skipped (100% pass rate)**
 
 ---

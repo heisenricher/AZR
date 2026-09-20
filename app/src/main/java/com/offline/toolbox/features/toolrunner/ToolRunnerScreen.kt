@@ -159,6 +159,21 @@ import com.offline.toolbox.tools.security.SymmetricCipherTool
 import com.offline.toolbox.tools.text.AnagramSolverTool
 import com.offline.toolbox.tools.text.TextWrapTool
 import com.offline.toolbox.tools.text.ZalgoTextTool
+import com.offline.toolbox.tools.developer.UserAgentParserTool
+import com.offline.toolbox.tools.developer.SemVerComparatorTool
+import com.offline.toolbox.tools.developer.ChmodPermissionsCalculatorTool
+import com.offline.toolbox.tools.developer.HttpHeaderInspectorTool
+import com.offline.toolbox.tools.security.TotpGeneratorTool
+import com.offline.toolbox.tools.security.PassphraseDicewareTool
+import com.offline.toolbox.tools.data.JsonPathEvaluatorTool
+import com.offline.toolbox.tools.data.TsvToCsvTool
+import com.offline.toolbox.tools.math.MatrixCalculatorTool
+import com.offline.toolbox.tools.math.StatisticsDistributionTool
+import com.offline.toolbox.tools.math.CompoundAnnualGrowthRateTool
+import com.offline.toolbox.tools.text.TextCaseInspectorTool
+import com.offline.toolbox.tools.text.NatoPhoneticTool
+import com.offline.toolbox.tools.media.BpmTapperTool
+import com.offline.toolbox.tools.color.ColorBlindnessSimulatorTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1343,6 +1358,156 @@ fun ToolRunnerScreen(
                     onOutputChange = { out ->
                         outputText = out
                         executionSummary = "Color matched"
+                        errorMessage = null
+                    }
+                )
+            }
+            is UserAgentParserTool -> {
+                UserAgentParserToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "User-Agent analyzed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is SemVerComparatorTool -> {
+                SemVerComparatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "SemVer evaluated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is ChmodPermissionsCalculatorTool -> {
+                ChmodPermissionsCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Permissions calculated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is HttpHeaderInspectorTool -> {
+                HttpHeaderInspectorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "HTTP headers audited"
+                        errorMessage = null
+                    }
+                )
+            }
+            is TotpGeneratorTool -> {
+                TotpGeneratorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "2FA TOTP generated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is PassphraseDicewareTool -> {
+                PassphraseDicewareToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Diceware passphrase generated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is JsonPathEvaluatorTool -> {
+                JsonPathEvaluatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "JSONPath query evaluated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is TsvToCsvTool -> {
+                TsvToCsvToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "TSV/CSV converted"
+                        errorMessage = null
+                    }
+                )
+            }
+            is MatrixCalculatorTool -> {
+                MatrixCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Matrix calculation complete"
+                        errorMessage = null
+                    }
+                )
+            }
+            is StatisticsDistributionTool -> {
+                StatisticsDistributionToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Normal distribution evaluated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is CompoundAnnualGrowthRateTool -> {
+                CompoundAnnualGrowthRateToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "CAGR calculated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is TextCaseInspectorTool -> {
+                TextCaseInspectorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Case style analyzed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is NatoPhoneticTool -> {
+                NatoPhoneticToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "NATO phonetic translated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is BpmTapperTool -> {
+                BpmTapperToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Tempo evaluated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorBlindnessSimulatorTool -> {
+                ColorBlindnessSimulatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Color blindness simulated"
                         errorMessage = null
                     }
                 )
