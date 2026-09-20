@@ -174,6 +174,21 @@ import com.offline.toolbox.tools.text.TextCaseInspectorTool
 import com.offline.toolbox.tools.text.NatoPhoneticTool
 import com.offline.toolbox.tools.media.BpmTapperTool
 import com.offline.toolbox.tools.color.ColorBlindnessSimulatorTool
+import com.offline.toolbox.tools.developer.SubnetSupernetCalculatorTool
+import com.offline.toolbox.tools.developer.DnsRecordParserTool
+import com.offline.toolbox.tools.developer.DockerComposeValidatorTool
+import com.offline.toolbox.tools.developer.SqlDialectConverterTool
+import com.offline.toolbox.tools.security.ShamirSecretSharingTool
+import com.offline.toolbox.tools.security.SteganographyTextTool
+import com.offline.toolbox.tools.data.XmlToJsonConverterTool
+import com.offline.toolbox.tools.data.HexDumpViewerTool
+import com.offline.toolbox.tools.math.PolynomialRootSolverTool
+import com.offline.toolbox.tools.math.VectorMathCalculatorTool
+import com.offline.toolbox.tools.math.BmrTdeeCalculatorTool
+import com.offline.toolbox.tools.text.MarkdownTableFormatterTool
+import com.offline.toolbox.tools.text.StringSimilarityTool
+import com.offline.toolbox.tools.color.WcagApcaContrastTool
+import com.offline.toolbox.tools.media.AudioFrequencyIntervalTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1508,6 +1523,141 @@ fun ToolRunnerScreen(
                     onOutputChange = { out ->
                         outputText = out
                         executionSummary = "Color blindness simulated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is SubnetSupernetCalculatorTool -> {
+                SubnetSupernetCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is DnsRecordParserTool -> {
+                DnsRecordParserUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is DockerComposeValidatorTool -> {
+                DockerComposeValidatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SqlDialectConverterTool -> {
+                SqlDialectConverterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ShamirSecretSharingTool -> {
+                ShamirSecretSharingUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SteganographyTextTool -> {
+                SteganographyTextUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is XmlToJsonConverterTool -> {
+                XmlToJsonConverterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is HexDumpViewerTool -> {
+                HexDumpViewerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is PolynomialRootSolverTool -> {
+                PolynomialRootSolverUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is VectorMathCalculatorTool -> {
+                VectorMathCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BmrTdeeCalculatorTool -> {
+                BmrTdeeCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is MarkdownTableFormatterTool -> {
+                MarkdownTableFormatterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is StringSimilarityTool -> {
+                StringSimilarityUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is WcagApcaContrastTool -> {
+                WcagApcaContrastUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is AudioFrequencyIntervalTool -> {
+                AudioFrequencyIntervalUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
                         errorMessage = null
                     }
                 )

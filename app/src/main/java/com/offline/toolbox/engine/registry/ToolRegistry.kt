@@ -109,6 +109,21 @@ import com.offline.toolbox.tools.text.TextCaseInspectorTool
 import com.offline.toolbox.tools.text.NatoPhoneticTool
 import com.offline.toolbox.tools.media.BpmTapperTool
 import com.offline.toolbox.tools.color.ColorBlindnessSimulatorTool
+import com.offline.toolbox.tools.developer.SubnetSupernetCalculatorTool
+import com.offline.toolbox.tools.developer.DnsRecordParserTool
+import com.offline.toolbox.tools.developer.DockerComposeValidatorTool
+import com.offline.toolbox.tools.developer.SqlDialectConverterTool
+import com.offline.toolbox.tools.security.ShamirSecretSharingTool
+import com.offline.toolbox.tools.security.SteganographyTextTool
+import com.offline.toolbox.tools.data.XmlToJsonConverterTool
+import com.offline.toolbox.tools.data.HexDumpViewerTool
+import com.offline.toolbox.tools.math.PolynomialRootSolverTool
+import com.offline.toolbox.tools.math.VectorMathCalculatorTool
+import com.offline.toolbox.tools.math.BmrTdeeCalculatorTool
+import com.offline.toolbox.tools.text.MarkdownTableFormatterTool
+import com.offline.toolbox.tools.text.StringSimilarityTool
+import com.offline.toolbox.tools.color.WcagApcaContrastTool
+import com.offline.toolbox.tools.media.AudioFrequencyIntervalTool
 
 /**
  * Central registry that indexes all available offline utilities.
@@ -289,6 +304,34 @@ object ToolRegistry {
         // Media, Audio & Color
         register(BpmTapperTool())
         register(ColorBlindnessSimulatorTool())
+
+        // --- Phase 8: The Sovereign Suite (120 Tools Milestone) ---
+        // Developer & Networking
+        register(SubnetSupernetCalculatorTool())
+        register(DnsRecordParserTool())
+        register(DockerComposeValidatorTool())
+        register(SqlDialectConverterTool())
+
+        // Security & Cryptography
+        register(ShamirSecretSharingTool())
+        register(SteganographyTextTool())
+
+        // Data & Formats
+        register(XmlToJsonConverterTool())
+        register(HexDumpViewerTool())
+
+        // Math, Science & Health
+        register(PolynomialRootSolverTool())
+        register(VectorMathCalculatorTool())
+        register(BmrTdeeCalculatorTool())
+
+        // Text & Typography
+        register(MarkdownTableFormatterTool())
+        register(StringSimilarityTool())
+
+        // Media, Color & Acoustics
+        register(WcagApcaContrastTool())
+        register(AudioFrequencyIntervalTool())
     }
 
     fun register(tool: Tool<*, *>) {

@@ -227,10 +227,31 @@ object LocalSearchEngine {
         "phonetic" to listOf("nato & icao radio phonetic"),
         "metronome" to listOf("metronome & bpm tempo tapper"),
         "bpm" to listOf("metronome & bpm tempo tapper"),
-        "tempo" to listOf("metronome & bpm tempo tapper"),
         "color blindness" to listOf("color vision deficiency & accessibility"),
         "protanopia" to listOf("color vision deficiency & accessibility"),
-        "deuteranopia" to listOf("color vision deficiency & accessibility")
+        "deuteranopia" to listOf("color vision deficiency & accessibility"),
+        "supernet" to listOf("cidr route aggregation & supernet"),
+        "aggregation" to listOf("cidr route aggregation & supernet"),
+        "dns" to listOf("dns zone file & resource record"),
+        "zone" to listOf("dns zone file & resource record"),
+        "docker" to listOf("docker compose yaml & port conflict"),
+        "compose" to listOf("docker compose yaml & port conflict"),
+        "dialect" to listOf("sql dialect translator"),
+        "shamir" to listOf("shamir's secret sharing threshold"),
+        "steganography" to listOf("invisible unicode text steganography"),
+        "stego" to listOf("invisible unicode text steganography"),
+        "xml to json" to listOf("xml <-> json bi-directional"),
+        "hexdump" to listOf("hex dump & binary memory inspector"),
+        "polynomial" to listOf("quadratic & cubic polynomial root"),
+        "cubic" to listOf("quadratic & cubic polynomial root"),
+        "vector" to listOf("2d & 3d vector math engine"),
+        "bmr" to listOf("bmr & daily caloric expenditure"),
+        "tdee" to listOf("bmr & daily caloric expenditure"),
+        "table" to listOf("markdown table formatter & padded"),
+        "similarity" to listOf("string distance & similarity comparator"),
+        "levenshtein" to listOf("string distance & similarity comparator"),
+        "apca" to listOf("wcag 3 apca & perceptual contrast"),
+        "interval" to listOf("musical interval & acoustic harmony")
     )
 
     fun search(query: String, tools: List<Tool<*, *>> = ToolRegistry.getAllTools()): List<SearchResultItem> {
