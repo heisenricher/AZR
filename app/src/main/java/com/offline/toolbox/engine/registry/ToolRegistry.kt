@@ -65,6 +65,20 @@ import com.offline.toolbox.tools.text.TextCaseConverterTool
 import com.offline.toolbox.tools.text.TextCleanerTool
 import com.offline.toolbox.tools.text.TextDiffTool
 import com.offline.toolbox.tools.text.WordCounterTool
+import com.offline.toolbox.tools.color.ColorPaletteGeneratorTool
+import com.offline.toolbox.tools.data.CsvStatsTool
+import com.offline.toolbox.tools.data.YamlToJsonTool
+import com.offline.toolbox.tools.developer.CronExpressionTool
+import com.offline.toolbox.tools.developer.MacAddressTool
+import com.offline.toolbox.tools.developer.PipelineChainingTool
+import com.offline.toolbox.tools.developer.SubnetCalculatorTool
+import com.offline.toolbox.tools.math.FuelCostCalculatorTool
+import com.offline.toolbox.tools.math.GpaCalculatorTool
+import com.offline.toolbox.tools.media.AspectRatioCalculatorTool
+import com.offline.toolbox.tools.security.HmacGeneratorTool
+import com.offline.toolbox.tools.security.RsaKeyPairTool
+import com.offline.toolbox.tools.text.LeetspeakTool
+import com.offline.toolbox.tools.text.TextBinaryHexTool
 
 /**
  * Central registry that indexes all available offline utilities.
@@ -162,6 +176,33 @@ object ToolRegistry {
         register(ZipArchiveTool())
         register(FileChecksumTool())
         register(PdfGeneratorTool())
+
+        // Phase 5 Additions (75 Tools Milestone)
+        // Developer & Network
+        register(SubnetCalculatorTool())
+        register(MacAddressTool())
+        register(CronExpressionTool())
+        register(PipelineChainingTool())
+
+        // Security & Cryptography
+        register(HmacGeneratorTool())
+        register(RsaKeyPairTool())
+
+        // Data & Formats
+        register(YamlToJsonTool())
+        register(CsvStatsTool())
+
+        // Media, Visual & Color
+        register(ColorPaletteGeneratorTool())
+        register(AspectRatioCalculatorTool())
+
+        // Math & Finance
+        register(FuelCostCalculatorTool())
+        register(GpaCalculatorTool())
+
+        // Text & Encoding
+        register(TextBinaryHexTool())
+        register(LeetspeakTool())
     }
 
     fun register(tool: Tool<*, *>) {

@@ -130,6 +130,20 @@ import com.offline.toolbox.tools.text.MorseCodeTool
 import com.offline.toolbox.tools.text.Rot13CipherTool
 import com.offline.toolbox.tools.text.SlugGeneratorTool
 import com.offline.toolbox.tools.text.StringInspectorTool
+import com.offline.toolbox.tools.color.ColorPaletteGeneratorTool
+import com.offline.toolbox.tools.data.CsvStatsTool
+import com.offline.toolbox.tools.data.YamlToJsonTool
+import com.offline.toolbox.tools.developer.CronExpressionTool
+import com.offline.toolbox.tools.developer.MacAddressTool
+import com.offline.toolbox.tools.developer.PipelineChainingTool
+import com.offline.toolbox.tools.developer.SubnetCalculatorTool
+import com.offline.toolbox.tools.math.FuelCostCalculatorTool
+import com.offline.toolbox.tools.math.GpaCalculatorTool
+import com.offline.toolbox.tools.media.AspectRatioCalculatorTool
+import com.offline.toolbox.tools.security.HmacGeneratorTool
+import com.offline.toolbox.tools.security.RsaKeyPairTool
+import com.offline.toolbox.tools.text.LeetspeakTool
+import com.offline.toolbox.tools.text.TextBinaryHexTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1024,6 +1038,146 @@ fun ToolRunnerScreen(
                     onOutputChange = { out ->
                         outputText = out
                         executionSummary = "CSV filtered & sorted"
+                        errorMessage = null
+                    }
+                )
+            }
+            is SubnetCalculatorTool -> {
+                SubnetCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Subnet calculation completed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is MacAddressTool -> {
+                MacAddressToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "MAC address parsed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is CronExpressionTool -> {
+                CronExpressionToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Cron expression translated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is HmacGeneratorTool -> {
+                HmacGeneratorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "HMAC generated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is RsaKeyPairTool -> {
+                RsaKeyPairToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "RSA key pair generated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is YamlToJsonTool -> {
+                YamlToJsonToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "YAML/JSON transformed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is CsvStatsTool -> {
+                CsvStatsToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "CSV statistical profile generated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorPaletteGeneratorTool -> {
+                ColorPaletteGeneratorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Harmonious palette generated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is AspectRatioCalculatorTool -> {
+                AspectRatioToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Aspect ratio computed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is FuelCostCalculatorTool -> {
+                FuelCostToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Fuel cost analyzed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is GpaCalculatorTool -> {
+                GpaCalculatorToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "GPA evaluated"
+                        errorMessage = null
+                    }
+                )
+            }
+            is TextBinaryHexTool -> {
+                TextBinaryHexToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Binary/Hex stream converted"
+                        errorMessage = null
+                    }
+                )
+            }
+            is LeetspeakTool -> {
+                LeetspeakToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Leetspeak transformed"
+                        errorMessage = null
+                    }
+                )
+            }
+            is PipelineChainingTool -> {
+                PipelineChainingToolUI(
+                    tool = tool,
+                    onOutputChange = { out ->
+                        outputText = out
+                        executionSummary = "Pipeline executed"
                         errorMessage = null
                     }
                 )
