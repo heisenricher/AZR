@@ -309,7 +309,34 @@ object LocalSearchEngine {
         "beat frequency" to listOf("acoustic beat & binaural frequency analyzer"),
         "brainwave" to listOf("acoustic beat & binaural frequency analyzer"),
         "color mix" to listOf("subtractive & additive color mixer"),
-        "subtractive" to listOf("subtractive & additive color mixer")
+        "subtractive" to listOf("subtractive & additive color mixer"),
+        // Phase 11 Synonyms
+        "nginx" to listOf("nginx configuration linter & proxy validator"),
+        "sqlite wal" to listOf("sqlite pragma & performance advisor"),
+        "pragma" to listOf("sqlite pragma & performance advisor"),
+        "otpauth" to listOf("hmac totp/hotp uri & key generator"),
+        "umask" to listOf("unix umask & permissions calculator"),
+        "vernam" to listOf("vernam one-time pad (otp) cipher"),
+        "one-time pad" to listOf("vernam one-time pad (otp) cipher"),
+        "bip39" to listOf("bip-39 mnemonic seed & entropy validator"),
+        "seed phrase" to listOf("bip-39 mnemonic seed & entropy validator"),
+        "wkt" to listOf("wkt geometry parser & geojson converter"),
+        "bencode" to listOf("bittorrent bencode parser & serializer"),
+        "torrent" to listOf("bittorrent bencode parser & serializer"),
+        "monte carlo" to listOf("monte carlo pi simulator & error estimator"),
+        "ytm" to listOf("bond yield to maturity (ytm) & duration solver"),
+        "bond" to listOf("bond yield to maturity (ytm) & duration solver"),
+        "kinematics" to listOf("2d kinematics & projectile trajectory calculator"),
+        "projectile" to listOf("2d kinematics & projectile trajectory calculator"),
+        "ballistics" to listOf("2d kinematics & projectile trajectory calculator"),
+        "rle" to listOf("run-length encoding (rle) compression engine"),
+        "run length" to listOf("run-length encoding (rle) compression engine"),
+        "levenshtein matrix" to listOf("levenshtein dp matrix & alignment visualizer"),
+        "wagner fischer" to listOf("levenshtein dp matrix & alignment visualizer"),
+        "rt60" to listOf("acoustic reverberation time (rt60) calculator"),
+        "reverb" to listOf("acoustic reverberation time (rt60) calculator"),
+        "ciede2000" to listOf("ciede2000 color difference (δe00) calculator"),
+        "delta e" to listOf("ciede2000 color difference (δe00) calculator")
     )
 
     fun search(query: String, tools: List<Tool<*, *>> = ToolRegistry.getAllTools()): List<SearchResultItem> {

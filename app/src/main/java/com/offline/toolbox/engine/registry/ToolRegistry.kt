@@ -155,6 +155,23 @@ import com.offline.toolbox.tools.text.TextStatisticsNgramTool
 import com.offline.toolbox.tools.media.BeatsBinauralAcousticTool
 import com.offline.toolbox.tools.color.ColorHarmonyMixingTool
 
+// Phase 11 - The Sesquicentennial Expansion (150 -> 165)
+import com.offline.toolbox.tools.developer.NginxConfigValidatorTool
+import com.offline.toolbox.tools.developer.SqlitePragmaInspectorTool
+import com.offline.toolbox.tools.developer.HmacTotpUriBuilderTool
+import com.offline.toolbox.tools.developer.UnixUmaskCalculatorTool
+import com.offline.toolbox.tools.security.VernamOneTimePadTool
+import com.offline.toolbox.tools.security.Bip39MnemonicEntropyTool
+import com.offline.toolbox.tools.data.WktGeometryParserTool
+import com.offline.toolbox.tools.data.BencodeParserTool
+import com.offline.toolbox.tools.math.MonteCarloPiSimulatorTool
+import com.offline.toolbox.tools.math.BondYieldToMaturityTool
+import com.offline.toolbox.tools.math.KinematicsTrajectoryTool
+import com.offline.toolbox.tools.text.RunLengthEncodingTool
+import com.offline.toolbox.tools.text.LevenshteinMatrixVisualizerTool
+import com.offline.toolbox.tools.media.ReverbRt60AcousticTool
+import com.offline.toolbox.tools.color.ColorDeltaE2000Tool
+
 /**
  * Central registry that indexes all available offline utilities.
  * Adding a new tool is fully decoupled: just implement [Tool] and add to this registry.
@@ -418,6 +435,34 @@ object ToolRegistry {
         // Media, Color & Acoustics
         register(BeatsBinauralAcousticTool())
         register(ColorHarmonyMixingTool())
+
+        // Phase 11 - The Sesquicentennial Expansion (150 -> 165)
+        // Developer & SysAdmin
+        register(NginxConfigValidatorTool())
+        register(SqlitePragmaInspectorTool())
+        register(HmacTotpUriBuilderTool())
+        register(UnixUmaskCalculatorTool())
+
+        // Security & Cryptography
+        register(VernamOneTimePadTool())
+        register(Bip39MnemonicEntropyTool())
+
+        // Data & GIS
+        register(WktGeometryParserTool())
+        register(BencodeParserTool())
+
+        // Math, Physics & Finance
+        register(MonteCarloPiSimulatorTool())
+        register(BondYieldToMaturityTool())
+        register(KinematicsTrajectoryTool())
+
+        // Text & Algorithms
+        register(RunLengthEncodingTool())
+        register(LevenshteinMatrixVisualizerTool())
+
+        // Media & Color
+        register(ReverbRt60AcousticTool())
+        register(ColorDeltaE2000Tool())
     }
 
     fun register(tool: Tool<*, *>) {

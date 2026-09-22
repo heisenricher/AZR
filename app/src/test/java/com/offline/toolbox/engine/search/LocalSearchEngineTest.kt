@@ -106,4 +106,55 @@ class LocalSearchEngineTest {
         val binauralResults = LocalSearchEngine.search("binaural")
         assertTrue("Searching 'binaural' should find Binaural beats analyzer", binauralResults.any { it.tool.metadata.id == "beats_binaural_acoustic_tool" })
     }
+
+    @Test
+    fun testPhase11SesquicentennialRegistryAndAliases() {
+        val all = ToolRegistry.getAllTools()
+        assertTrue("Total registered tools should be at least 165 (currently ${all.size})", all.size >= 165)
+
+        val nginxResults = LocalSearchEngine.search("nginx")
+        assertTrue("Searching 'nginx' should find Nginx validator", nginxResults.any { it.tool.metadata.id == "nginx_config_validator_tool" })
+
+        val pragmaResults = LocalSearchEngine.search("pragma")
+        assertTrue("Searching 'pragma' should find SQLite PRAGMA inspector", pragmaResults.any { it.tool.metadata.id == "sqlite_pragma_inspector_tool" })
+
+        val totpResults = LocalSearchEngine.search("otpauth")
+        assertTrue("Searching 'otpauth' should find TOTP URI builder", totpResults.any { it.tool.metadata.id == "hmac_totp_uri_builder_tool" })
+
+        val umaskResults = LocalSearchEngine.search("umask")
+        assertTrue("Searching 'umask' should find Unix umask calculator", umaskResults.any { it.tool.metadata.id == "unix_umask_calculator_tool" })
+
+        val vernamResults = LocalSearchEngine.search("vernam")
+        assertTrue("Searching 'vernam' should find Vernam OTP cipher", vernamResults.any { it.tool.metadata.id == "vernam_one_time_pad_tool" })
+
+        val bip39Results = LocalSearchEngine.search("bip39")
+        assertTrue("Searching 'bip39' should find BIP-39 mnemonic tool", bip39Results.any { it.tool.metadata.id == "bip39_mnemonic_entropy_tool" })
+
+        val wktResults = LocalSearchEngine.search("wkt")
+        assertTrue("Searching 'wkt' should find WKT geometry parser", wktResults.any { it.tool.metadata.id == "wkt_geometry_parser_tool" })
+
+        val bencodeResults = LocalSearchEngine.search("bencode")
+        assertTrue("Searching 'bencode' should find Bencode parser", bencodeResults.any { it.tool.metadata.id == "bencode_parser_tool" })
+
+        val mcResults = LocalSearchEngine.search("monte carlo")
+        assertTrue("Searching 'monte carlo' should find Monte Carlo Pi tool", mcResults.any { it.tool.metadata.id == "monte_carlo_pi_simulator_tool" })
+
+        val ytmResults = LocalSearchEngine.search("ytm")
+        assertTrue("Searching 'ytm' should find Bond YTM solver", ytmResults.any { it.tool.metadata.id == "bond_yield_to_maturity_tool" })
+
+        val kinResults = LocalSearchEngine.search("kinematics")
+        assertTrue("Searching 'kinematics' should find Kinematics trajectory tool", kinResults.any { it.tool.metadata.id == "kinematics_trajectory_tool" })
+
+        val rleResults = LocalSearchEngine.search("rle")
+        assertTrue("Searching 'rle' should find RLE compression tool", rleResults.any { it.tool.metadata.id == "run_length_encoding_tool" })
+
+        val levResults = LocalSearchEngine.search("levenshtein matrix")
+        assertTrue("Searching 'levenshtein matrix' should find Levenshtein visualizer", levResults.any { it.tool.metadata.id == "levenshtein_matrix_visualizer_tool" })
+
+        val rt60Results = LocalSearchEngine.search("rt60")
+        assertTrue("Searching 'rt60' should find RT60 acoustic tool", rt60Results.any { it.tool.metadata.id == "reverb_rt60_acoustic_tool" })
+
+        val deltaEResults = LocalSearchEngine.search("ciede2000")
+        assertTrue("Searching 'ciede2000' should find CIEDE2000 color tool", deltaEResults.any { it.tool.metadata.id == "color_delta_e_2000_tool" })
+    }
 }

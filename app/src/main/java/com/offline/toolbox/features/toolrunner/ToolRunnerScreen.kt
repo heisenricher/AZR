@@ -219,6 +219,22 @@ import com.offline.toolbox.tools.text.SoundexMetaphoneTool
 import com.offline.toolbox.tools.text.TextStatisticsNgramTool
 import com.offline.toolbox.tools.media.BeatsBinauralAcousticTool
 import com.offline.toolbox.tools.color.ColorHarmonyMixingTool
+// Phase 11 Tools
+import com.offline.toolbox.tools.developer.NginxConfigValidatorTool
+import com.offline.toolbox.tools.developer.SqlitePragmaInspectorTool
+import com.offline.toolbox.tools.developer.HmacTotpUriBuilderTool
+import com.offline.toolbox.tools.developer.UnixUmaskCalculatorTool
+import com.offline.toolbox.tools.security.VernamOneTimePadTool
+import com.offline.toolbox.tools.security.Bip39MnemonicEntropyTool
+import com.offline.toolbox.tools.data.WktGeometryParserTool
+import com.offline.toolbox.tools.data.BencodeParserTool
+import com.offline.toolbox.tools.math.MonteCarloPiSimulatorTool
+import com.offline.toolbox.tools.math.BondYieldToMaturityTool
+import com.offline.toolbox.tools.math.KinematicsTrajectoryTool
+import com.offline.toolbox.tools.text.RunLengthEncodingTool
+import com.offline.toolbox.tools.text.LevenshteinMatrixVisualizerTool
+import com.offline.toolbox.tools.media.ReverbRt60AcousticTool
+import com.offline.toolbox.tools.color.ColorDeltaE2000Tool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1955,6 +1971,142 @@ fun ToolRunnerScreen(
             }
             is ColorHarmonyMixingTool -> {
                 ColorHarmonyMixingUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            // Phase 11 Tools
+            is NginxConfigValidatorTool -> {
+                NginxConfigValidatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SqlitePragmaInspectorTool -> {
+                SqlitePragmaInspectorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is HmacTotpUriBuilderTool -> {
+                HmacTotpUriBuilderUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is UnixUmaskCalculatorTool -> {
+                UnixUmaskCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is VernamOneTimePadTool -> {
+                VernamOneTimePadUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is Bip39MnemonicEntropyTool -> {
+                Bip39MnemonicEntropyUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is WktGeometryParserTool -> {
+                WktGeometryParserUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BencodeParserTool -> {
+                BencodeParserUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is MonteCarloPiSimulatorTool -> {
+                MonteCarloPiSimulatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BondYieldToMaturityTool -> {
+                BondYieldToMaturityUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is KinematicsTrajectoryTool -> {
+                KinematicsTrajectoryUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is RunLengthEncodingTool -> {
+                RunLengthEncodingUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is LevenshteinMatrixVisualizerTool -> {
+                LevenshteinMatrixVisualizerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ReverbRt60AcousticTool -> {
+                ReverbRt60AcousticUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorDeltaE2000Tool -> {
+                ColorDeltaE2000UI(
                     onResultUpdated = { report, summary ->
                         outputText = report
                         executionSummary = summary
