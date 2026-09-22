@@ -13,7 +13,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -251,10 +250,10 @@ fun PlayfairCipherUI(onResultUpdated: (String, String?) -> Unit) {
 // 3. Great-Circle Distance & Bearing Navigator UI (Tool 198)
 @Composable
 fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
-    var lat1 by remember { mutableDoubleStateOf(37.774929) }  // SFO
-    var lon1 by remember { mutableDoubleStateOf(-122.419416) }
-    var lat2 by remember { mutableDoubleStateOf(40.712776) }  // NYC
-    var lon2 by remember { mutableDoubleStateOf(-74.005974) }
+    var lat1Text by remember { mutableStateOf("37.774929") }  // SFO
+    var lon1Text by remember { mutableStateOf("-122.419416") }
+    var lat2Text by remember { mutableStateOf("40.712776") }  // NYC
+    var lon2Text by remember { mutableStateOf("-74.005974") }
     var model by remember { mutableStateOf("WGS84_ELLIPSOID") }
 
     val coroutineScope = rememberCoroutineScope()
@@ -262,7 +261,11 @@ fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
 
     fun runNav() {
         coroutineScope.launch {
-            val input = GreatCircleInput(lat1, lon1, lat2, lon2, model)
+            val l1 = lat1Text.toDoubleOrNull() ?: 0.0
+            val o1 = lon1Text.toDoubleOrNull() ?: 0.0
+            val l2 = lat2Text.toDoubleOrNull() ?: 0.0
+            val o2 = lon2Text.toDoubleOrNull() ?: 0.0
+            val input = GreatCircleInput(l1, o1, l2, o2, model)
             when (val result = tool.execute(input)) {
                 is ToolResult.Success -> onResultUpdated(result.data.formattedReport, result.data.summary)
                 is ToolResult.Failure -> onResultUpdated("Error: ${result.message}", null)
@@ -270,7 +273,7 @@ fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
         }
     }
 
-    LaunchedEffect(lat1, lon1, lat2, lon2, model) { runNav() }
+    LaunchedEffect(model) { runNav() }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(
@@ -294,23 +297,29 @@ fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             FilterChip(
-                selected = lat1 == 37.774929 && lat2 == 40.712776,
+                selected = lat1Text == "37.774929" && lat2Text == "40.712776",
                 onClick = {
-                    lat1 = 37.774929; lon1 = -122.419416; lat2 = 40.712776; lon2 = -74.005974
+                    lat1Text = "37.774929"; lon1Text = "-122.419416"
+                    lat2Text = "40.712776"; lon2Text = "-74.005974"
+                    runNav()
                 },
                 label = { Text("SFO -> NYC") }
             )
             FilterChip(
-                selected = lat1 == 51.507351 && lat2 == 35.676192,
+                selected = lat1Text == "51.507351" && lat2Text == "35.676192",
                 onClick = {
-                    lat1 = 51.507351; lon1 = -0.127758; lat2 = 35.676192; lon2 = 139.650311
+                    lat1Text = "51.507351"; lon1Text = "-0.127758"
+                    lat2Text = "35.676192"; lon2Text = "139.650311"
+                    runNav()
                 },
                 label = { Text("London -> Tokyo") }
             )
             FilterChip(
-                selected = lat1 == -33.868820 && lat2 == 34.052235,
+                selected = lat1Text == "-33.868820" && lat2Text == "34.052235",
                 onClick = {
-                    lat1 = -33.868820; lon1 = 151.209296; lat2 = 34.052235; lon2 = -118.243683
+                    lat1Text = "-33.868820"; lon1Text = "151.209296"
+                    lat2Text = "34.052235"; lon2Text = "-118.243683"
+                    runNav()
                 },
                 label = { Text("Sydney -> LAX") }
             )
@@ -318,16 +327,22 @@ fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             ToolInputField(
-                value = lat1.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> lat1 = v } },
+                value = lat1Text,
+                onValueChange = {
+                    lat1Text = it
+                    runNav()
+                },
                 label = "Origin Lat (°)",
                 placeholder = "37.7749",
                 modifier = Modifier.weight(1f),
                 minLines = 1
             )
             ToolInputField(
-                value = lon1.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> lon1 = v } },
+                value = lon1Text,
+                onValueChange = {
+                    lon1Text = it
+                    runNav()
+                },
                 label = "Origin Lon (°)",
                 placeholder = "-122.4194",
                 modifier = Modifier.weight(1f),
@@ -337,16 +352,22 @@ fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             ToolInputField(
-                value = lat2.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> lat2 = v } },
+                value = lat2Text,
+                onValueChange = {
+                    lat2Text = it
+                    runNav()
+                },
                 label = "Dest Lat (°)",
                 placeholder = "40.7128",
                 modifier = Modifier.weight(1f),
                 minLines = 1
             )
             ToolInputField(
-                value = lon2.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> lon2 = v } },
+                value = lon2Text,
+                onValueChange = {
+                    lon2Text = it
+                    runNav()
+                },
                 label = "Dest Lon (°)",
                 placeholder = "-74.0060",
                 modifier = Modifier.weight(1f),
@@ -365,7 +386,7 @@ fun GreatCircleDistanceUI(onResultUpdated: (String, String?) -> Unit) {
 fun ResistorEquivalentCircuitUI(onResultUpdated: (String, String?) -> Unit) {
     var topology by remember { mutableStateOf("SERIES") }
     var resistorValues by remember { mutableStateOf("100, 220, 470") }
-    var supplyVoltage by remember { mutableDoubleStateOf(12.0) }
+    var supplyVoltageText by remember { mutableStateOf("12.0") }
     var loadResistance by remember { mutableStateOf("1000") }
 
     val coroutineScope = rememberCoroutineScope()
@@ -373,8 +394,9 @@ fun ResistorEquivalentCircuitUI(onResultUpdated: (String, String?) -> Unit) {
 
     fun runCircuit() {
         coroutineScope.launch {
+            val vSupply = supplyVoltageText.toDoubleOrNull() ?: 12.0
             val rLoad = loadResistance.toDoubleOrNull()
-            val input = ResistorCircuitInput(topology, resistorValues, supplyVoltage, rLoad)
+            val input = ResistorCircuitInput(topology, resistorValues, vSupply, rLoad)
             when (val result = tool.execute(input)) {
                 is ToolResult.Success -> onResultUpdated(result.data.formattedReport, result.data.summary)
                 is ToolResult.Failure -> onResultUpdated("Error: ${result.message}", null)
@@ -382,7 +404,7 @@ fun ResistorEquivalentCircuitUI(onResultUpdated: (String, String?) -> Unit) {
         }
     }
 
-    LaunchedEffect(topology, supplyVoltage) { runCircuit() }
+    LaunchedEffect(topology) { runCircuit() }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(
@@ -432,8 +454,11 @@ fun ResistorEquivalentCircuitUI(onResultUpdated: (String, String?) -> Unit) {
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             ToolInputField(
-                value = supplyVoltage.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> supplyVoltage = v } },
+                value = supplyVoltageText,
+                onValueChange = {
+                    supplyVoltageText = it
+                    runCircuit()
+                },
                 label = "Supply Voltage (V)",
                 placeholder = "12.0",
                 modifier = Modifier.weight(1f),
@@ -464,8 +489,8 @@ fun ResistorEquivalentCircuitUI(onResultUpdated: (String, String?) -> Unit) {
 @Composable
 fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
     var pathData by remember { mutableStateOf("M 10 80 Q 52.5 10, 95 80 T 180 80 Z") }
-    var viewportWidth by remember { mutableDoubleStateOf(200.0) }
-    var viewportHeight by remember { mutableDoubleStateOf(200.0) }
+    var viewportWidthText by remember { mutableStateOf("200") }
+    var viewportHeightText by remember { mutableStateOf("200") }
     var fillColorHex by remember { mutableStateOf("#3F51B5") }
 
     val coroutineScope = rememberCoroutineScope()
@@ -473,7 +498,9 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
 
     fun runSvg() {
         coroutineScope.launch {
-            val input = SvgPathInput(pathData, viewportWidth, viewportHeight, fillColorHex)
+            val vpW = viewportWidthText.toDoubleOrNull() ?: 100.0
+            val vpH = viewportHeightText.toDoubleOrNull() ?: 100.0
+            val input = SvgPathInput(pathData, vpW, vpH, fillColorHex)
             when (val result = tool.execute(input)) {
                 is ToolResult.Success -> onResultUpdated(result.data.formattedReport, result.data.summary)
                 is ToolResult.Failure -> onResultUpdated("Error: ${result.message}", null)
@@ -481,7 +508,7 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
         }
     }
 
-    LaunchedEffect(viewportWidth, viewportHeight, fillColorHex) { runSvg() }
+    LaunchedEffect(fillColorHex) { runSvg() }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(
@@ -492,7 +519,8 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
                 selected = pathData.startsWith("M 10 80 Q"),
                 onClick = {
                     pathData = "M 10 80 Q 52.5 10, 95 80 T 180 80 Z"
-                    viewportWidth = 200.0; viewportHeight = 200.0
+                    viewportWidthText = "200"
+                    viewportHeightText = "200"
                     runSvg()
                 },
                 label = { Text("Quad Bézier Wave") }
@@ -501,7 +529,8 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
                 selected = pathData.startsWith("M 10 10 H 90"),
                 onClick = {
                     pathData = "M 10 10 H 90 V 90 H 10 L 10 10 Z"
-                    viewportWidth = 100.0; viewportHeight = 100.0
+                    viewportWidthText = "100"
+                    viewportHeightText = "100"
                     runSvg()
                 },
                 label = { Text("Box (H/V/L/Z)") }
@@ -510,7 +539,8 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
                 selected = pathData.startsWith("M 50 15 C"),
                 onClick = {
                     pathData = "M 50 15 C 30 -5, 0 10, 0 40 C 0 70, 50 95, 50 95 C 50 95, 100 70, 100 40 C 100 10, 70 -5, 50 15 Z"
-                    viewportWidth = 100.0; viewportHeight = 100.0
+                    viewportWidthText = "100"
+                    viewportHeightText = "100"
                     fillColorHex = "#E91E63"
                     runSvg()
                 },
@@ -520,7 +550,8 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
                 selected = pathData.startsWith("M 50 0 L 61 35"),
                 onClick = {
                     pathData = "M 50 0 L 61 35 L 98 35 L 68 57 L 79 91 L 50 70 L 21 91 L 32 57 L 2 35 L 39 35 Z"
-                    viewportWidth = 100.0; viewportHeight = 100.0
+                    viewportWidthText = "100"
+                    viewportHeightText = "100"
                     fillColorHex = "#FFC107"
                     runSvg()
                 },
@@ -541,16 +572,22 @@ fun SvgPathDataInspectorUI(onResultUpdated: (String, String?) -> Unit) {
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             ToolInputField(
-                value = viewportWidth.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> viewportWidth = v } },
+                value = viewportWidthText,
+                onValueChange = {
+                    viewportWidthText = it
+                    runSvg()
+                },
                 label = "Viewport Width",
                 placeholder = "100.0",
                 modifier = Modifier.weight(1f),
                 minLines = 1
             )
             ToolInputField(
-                value = viewportHeight.toString(),
-                onValueChange = { it.toDoubleOrNull()?.let { v -> viewportHeight = v } },
+                value = viewportHeightText,
+                onValueChange = {
+                    viewportHeightText = it
+                    runSvg()
+                },
                 label = "Viewport Height",
                 placeholder = "100.0",
                 modifier = Modifier.weight(1f),

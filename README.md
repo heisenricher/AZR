@@ -2,7 +2,7 @@
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
 [![Download APK](https://img.shields.io/badge/Download-AZR--latest.apk-2ea44f.svg?logo=android&logoColor=white)](https://github.com/heisenricher/AZR/raw/main/apk/AZR-latest.apk)
-[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-469%20Passed-brightgreen.svg)](#automated-testing--quality)
+[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-472%20Passed-brightgreen.svg)](#automated-testing--quality)
 [![Tools Count](https://img.shields.io/badge/Utilities-200%20Tools-blue.svg)](#utility-catalog-200-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
@@ -27,8 +27,8 @@ Get the latest production APK directly on your Android device — 100% offline, 
 | **Package ID** | `com.offline.toolbox.debug` |
 | **Target Platforms** | Android 8.0 (API 26) through Android 15 (API 35) |
 | **Network Permission** | **Strictly None** (`android.permission.INTERNET` is omitted) |
-| **SHA-256 Checksum** | `6BCADA5C947DCAF0C8461B6FB0C8CD100797C6BD58E788F2ACDE538CE51975D8` |
-| **MD5 Checksum** | `9949387F9D81AEBCA09A485FD5F02683` |
+| **SHA-256 Checksum** | `C295ACF0CCBB3DB83B8A94AF12D6AE3CDD93F81F626181991720291A4FCE37BB` |
+| **MD5 Checksum** | `919782E520076C4ECF0B39C013DE552F` |
 
 ### Quick Installation Guide for Android:
 1. **Download:** Tap [**Download AZR-latest.apk**](https://github.com/heisenricher/AZR/raw/main/apk/AZR-latest.apk) in your browser on your phone.
@@ -48,7 +48,7 @@ Get the latest production APK directly on your Android device — 100% offline, 
 - **Advanced Perceptual Contrast & Colorimetry**: Stepped monochromatic shade/tint palettes with WCAG contrast evaluation, Porter-Duff "Source Over" alpha compositing, CIEDE2000 ($\Delta E_{00}$) perceptual difference standard, physical pigment subtractive color mixing (CMY/RYB absorption), screen additive RGB blending, modern light-adapted APCA (WCAG 3.0), and Planckian locus blackbody Kelvin-to-sRGB chromaticity approximations.
 - **OWASP Path Traversal Defenses**: Built-in protection against Zip Slip and directory traversal attacks during local archive inspection and extraction.
 - **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 200 utilities.
-- **469 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
+- **472 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
 
 ---
 
@@ -320,8 +320,8 @@ All 200 utilities and engine subsystems are verified with automated unit tests c
 ```
 
 **Results:**
-- **469 tests completed**
-- **469 tests passed**
+- **472 tests completed**
+- **472 tests passed**
 - **0 failures, 0 skipped (100% pass rate)**
 
 ---

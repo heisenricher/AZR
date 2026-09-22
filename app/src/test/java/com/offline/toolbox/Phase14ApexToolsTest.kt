@@ -219,4 +219,44 @@ class Phase14ApexToolsTest {
         val res = svgTool.execute(SvgPathInput(pathData = "   "))
         assertTrue(res is ToolResult.Failure)
     }
+
+    @Test
+    fun testResistorCircuit_zeroSupplyVoltageAndDroopSafeguard() = runTest {
+        val res = resistorTool.execute(
+            ResistorCircuitInput(
+                topology = "VOLTAGE_DIVIDER",
+                resistorValues = "10k, 10k",
+                supplyVoltageVolts = 0.0,
+                loadResistanceOhms = 10000.0
+            )
+        )
+        assertTrue(res is ToolResult.Success)
+        val data = (res as ToolResult.Success).data
+        assertEquals(0.0, data.dividerVoutNoLoad ?: -1.0, 0.001)
+        assertEquals(0.0, data.dividerVoutWithLoad ?: -1.0, 0.001)
+        assertFalse("Report should not contain NaN", data.formattedReport.contains("NaN"))
+        assertFalse("Report should not contain Infinity", data.formattedReport.contains("Infinity"))
+    }
+
+    @Test
+    fun testGreatCircle_coincidentPoints() = runTest {
+        val res = greatCircleTool.execute(
+            GreatCircleInput(lat1 = 45.0, lon1 = 9.0, lat2 = 45.0, lon2 = 9.0)
+        )
+        assertTrue(res is ToolResult.Success)
+        val data = (res as ToolResult.Success).data
+        assertEquals(0.0, data.distanceKm, 0.001)
+        assertEquals(0.0, data.distanceMiles, 0.001)
+    }
+
+    @Test
+    fun testPlayfairCipher_keywordWithJ() = runTest {
+        val res = playfairTool.execute(
+            PlayfairCipherInput(operation = "ENCRYPT", text = "JUSTICE", keyword = "JUPITER")
+        )
+        assertTrue(res is ToolResult.Success)
+        val data = (res as ToolResult.Success).data
+        assertTrue(data.resultText.isNotEmpty())
+        assertFalse("Result should not contain J", data.resultText.contains("J"))
+    }
 }

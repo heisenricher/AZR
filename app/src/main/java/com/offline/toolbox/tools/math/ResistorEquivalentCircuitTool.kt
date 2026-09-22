@@ -226,8 +226,9 @@ class ResistorEquivalentCircuitTool : Tool<ResistorCircuitInput, ResistorCircuit
                 appendLine("  Vout (Open / No Load): ${String.format(Locale.US, "%.3f", vOutNoLoad)} V")
                 if (vOutWithLoad != null) {
                     val droop = vOutNoLoad - vOutWithLoad
+                    val droopPct = if (vOutNoLoad > 0.0) (droop / vOutNoLoad) * 100.0 else 0.0
                     appendLine("  Vout (With Load ${String.format(Locale.US, "%,.0f", input.loadResistanceOhms ?: 0.0)} Ω): ${String.format(Locale.US, "%.3f", vOutWithLoad)} V")
-                    appendLine("  Voltage Droop / Sag:   ${String.format(Locale.US, "%.3f", droop)} V (${String.format(Locale.US, "%.1f", (droop / vOutNoLoad) * 100.0)}%)")
+                    appendLine("  Voltage Droop / Sag:   ${String.format(Locale.US, "%.3f", droop)} V (${String.format(Locale.US, "%.1f", droopPct)}%)")
                 }
             }
 
