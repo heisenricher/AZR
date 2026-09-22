@@ -1,12 +1,41 @@
 # AZR — Offline Android Utility Toolbox
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
+[![Download APK](https://img.shields.io/badge/Download-AZR--latest.apk-2ea44f.svg?logo=android&logoColor=white)](https://github.com/heisenricher/AZR/raw/main/apk/AZR-latest.apk)
 [![Tests Passing](https://img.shields.io/badge/Unit%20Tests-469%20Passed-brightgreen.svg)](#automated-testing--quality)
 [![Tools Count](https://img.shields.io/badge/Utilities-200%20Tools-blue.svg)](#utility-catalog-200-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
 
 **AZR (Offline Android Utility Toolbox)** is a premium, privacy-first, 100% offline Swiss Army knife of utilities engineered natively for Android. Designed for everyday users, power users, and developers alike, AZR operates with an uncompromising zero-network guarantee.
+
+---
+
+## 📲 Direct APK Download (Android)
+
+Get the latest production APK directly on your Android device — 100% offline, privacy-guaranteed, no store login required:
+
+[![Download APK](https://img.shields.io/badge/Download%20APK-v2.0.0%20(Latest)-2ea44f?style=for-the-badge&logo=android&logoColor=white)](https://github.com/heisenricher/AZR/raw/main/apk/AZR-latest.apk)
+[![Direct Versioned Link](https://img.shields.io/badge/Version-v2.0.0%20(200%20Tools)-blue?style=for-the-badge)](https://github.com/heisenricher/AZR/raw/main/apk/AZR-Offline-Toolbox-v2.0.0.apk)
+
+| Attribute | Details |
+|---|---|
+| **Direct Download (Latest)** | [**`AZR-latest.apk`**](https://github.com/heisenricher/AZR/raw/main/apk/AZR-latest.apk) *(Instant 1-click direct download)* |
+| **Direct Download (v2.0.0)** | [**`AZR-Offline-Toolbox-v2.0.0.apk`**](https://github.com/heisenricher/AZR/raw/main/apk/AZR-Offline-Toolbox-v2.0.0.apk) |
+| **File Size** | `20.1 MB` (`20,134,689 bytes`) |
+| **App Name** | **AZR Offline Toolbox** |
+| **Package ID** | `com.offline.toolbox.debug` |
+| **Target Platforms** | Android 8.0 (API 26) through Android 15 (API 35) |
+| **Network Permission** | **Strictly None** (`android.permission.INTERNET` is omitted) |
+| **SHA-256 Checksum** | `6BCADA5C947DCAF0C8461B6FB0C8CD100797C6BD58E788F2ACDE538CE51975D8` |
+| **MD5 Checksum** | `9949387F9D81AEBCA09A485FD5F02683` |
+
+### Quick Installation Guide for Android:
+1. **Download:** Tap [**Download AZR-latest.apk**](https://github.com/heisenricher/AZR/raw/main/apk/AZR-latest.apk) in your browser on your phone.
+2. **Open:** Tap the downloaded `.apk` file from your notification bar or downloads folder.
+3. **Allow Source (if prompted):** If Android displays *"For your security, your phone is not allowed to install unknown apps from this source"*, tap **Settings** and enable **Allow from this source**.
+4. **Install:** Tap **Install** -> **Open**.
+5. **Instant Offline Access:** All 200 production utilities are ready immediately with zero network requests.
 
 ---
 
