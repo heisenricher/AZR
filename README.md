@@ -1,8 +1,8 @@
 # AZR — Offline Android Utility Toolbox
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
-[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-423%20Passed-brightgreen.svg)](#automated-testing--quality)
-[![Tools Count](https://img.shields.io/badge/Utilities-180%20Tools-blue.svg)](#utility-catalog-180-tools)
+[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-455%20Passed-brightgreen.svg)](#automated-testing--quality)
+[![Tools Count](https://img.shields.io/badge/Utilities-195%20Tools-blue.svg)](#utility-catalog-195-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
 
@@ -12,20 +12,24 @@
 
 ## Key Highlights
 
-- **180 Production-Grade Utilities**: The 180 Tools Milestone spanning Linux systemd unit validation, Dockerfile security linting, Apache .htaccess rewrite rules, Kubernetes YAML resource and security inspection, classical Polybius Square coordinate matrix ciphers, Affine modular arithmetic ciphers with coprime checks, GeoHash spatial index codecs with 8-neighbor bounding boxes, CBOR (RFC 8949) binary hex inspection and JSON conversion, Ordinary and Annuity Due financial valuation schedules, NOAA Heat Index and NWS Wind Chill apparent temperature physics, Tsiolkovsky rocket propulsion equation solvers with mission delta-v budgets, English Porter Stemmer morphological reduction, Caesar cipher automated frequency cryptanalysis, Audio SNR/THD/ENOB acoustic metrics, and HEX Porter-Duff alpha color compositing.
+- **195 Production-Grade Utilities**: The 195 Tools Milestone (Phase 13 — The Bicentennial Preparation) spanning SQL query index advising & DDL generation, Terraform HCL syntax & secret linting, SemVer range constraint solving, Dotenv (.env) security leak auditing, Felix Delastelle's Bifid fractionated cipher, scrypt (RFC 7914) memory cost & ASIC sizing, Open Location Code (Google Plus Codes) geocoding, TSV tabular stream filtering & group-by aggregation, Ohm's & Joule's Law circuit solving with resistor color codes, Magnus-Tetens dew point & vapor pressure thermodynamics, Kepler's 3rd Law orbital mechanics, Jaro-Winkler string similarity metrics, Atbash classical reciprocal substitution ciphers, Broadcast audio LUFS & true peak normalization (ITU-R BS.1770 / EBU R128), and Monochromatic stepped color shade & tint scale generation with WCAG text contrast ratings.
 - **Multi-Tool Pipeline Chaining Engine (`PipelineEngine`)**: Execute multi-step sequential transformations (e.g. `Clean -> Case Convert -> Base64 -> Hash`) in a single atomic pass with intermediate audit trails.
 - **Zero Network Guarantee**: Absolutely **NO** `android.permission.INTERNET` in `AndroidManifest.xml`. No telemetry, no cloud analytics, no remote SDKs.
-- **On-Device Cryptography**: Classical coordinate ciphers (Polybius Square, Affine modular arithmetic), automated Caesar frequency cryptanalysis, BIP-39 mnemonic seed entropy verification, Vernam One-Time Pad cipher with CSPRNG key generation, RFC 9106 Argon2 memory/time cost sizing, RFC 7638 JWK SHA-256 thumbprints, OpenSSH public key SHA256/MD5 fingerprints, RFC 5869 HKDF Key Derivation, Polyalphabetic Vigenère with Index of Coincidence, Shamir's $(k, n)$ threshold secret sharing over $GF(256)$, RFC 6238 TOTP 2FA tokens, Diceware entropy, AES-256-GCM / CBC encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC, and multi-algorithm hashing.
-- **Advanced Perceptual Contrast & Colorimetry**: Porter-Duff "Source Over" alpha compositing, CIEDE2000 ($\Delta E_{00}$) perceptual difference standard, physical pigment subtractive color mixing (CMY/RYB absorption), screen additive RGB blending, modern light-adapted APCA (WCAG 3.0), and Planckian locus blackbody Kelvin-to-sRGB chromaticity approximations.
+- **On-Device Cryptography**: Felix Delastelle's Bifid fractionated cipher, scrypt (RFC 7914) memory-hard cost sizing, classical coordinate ciphers (Polybius Square, Affine modular arithmetic), automated Caesar frequency cryptanalysis, BIP-39 mnemonic seed entropy verification, Vernam One-Time Pad cipher with CSPRNG key generation, RFC 9106 Argon2 memory/time cost sizing, RFC 7638 JWK SHA-256 thumbprints, OpenSSH public key SHA256/MD5 fingerprints, RFC 5869 HKDF Key Derivation, Polyalphabetic Vigenère with Index of Coincidence, Shamir's $(k, n)$ threshold secret sharing over $GF(256)$, RFC 6238 TOTP 2FA tokens, Diceware entropy, AES-256-GCM / CBC encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC, and multi-algorithm hashing.
+- **Advanced Perceptual Contrast & Colorimetry**: Stepped monochromatic shade/tint palettes with WCAG contrast evaluation, Porter-Duff "Source Over" alpha compositing, CIEDE2000 ($\Delta E_{00}$) perceptual difference standard, physical pigment subtractive color mixing (CMY/RYB absorption), screen additive RGB blending, modern light-adapted APCA (WCAG 3.0), and Planckian locus blackbody Kelvin-to-sRGB chromaticity approximations.
 - **OWASP Path Traversal Defenses**: Built-in protection against Zip Slip and directory traversal attacks during local archive inspection and extraction.
-- **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 180 utilities.
-- **423 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
+- **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 195 utilities.
+- **455 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
 
 ---
 
-## Utility Catalog (180 Tools)
+## Utility Catalog (195 Tools)
 
-### 1. Developer & Network Tools (43 Tools)
+### 1. Developer & Network Tools (47 Tools)
+- **SQL Query Index Advisor & DDL Generator**: Analyze SQL queries (WHERE, JOIN, ORDER BY, GROUP BY) to suggest optimal composite B-Tree indexes, detect unindexed full table scans, and generate CREATE INDEX statements.
+- **Terraform HCL Syntax & Security Linter**: Validate HashiCorp HCL syntax, audit Terraform resource blocks, check unpinned provider versions, detect hardcoded plaintext credentials, and score security posture.
+- **SemVer Range & Version Solver**: Resolve and test semantic version ranges (^, ~, >=, <=, ||, wildcards, hyphen ranges) against candidate release versions to determine highest resolved dependencies.
+- **Dotenv (.env) Security & Syntax Linter**: Audit .env configuration files for hardcoded secrets (AWS keys, Stripe keys, JWT, passwords), duplicate variables, shell quoting syntax, and generate sanitized .env.example templates.
 - **Systemd Service Unit Validator & Security Auditor**: Validate Linux systemd `.service` unit syntax (`[Unit]`, `[Service]`, `[Install]`), ExecStart command presence, restart policies, and audit process sandboxing directives (`NoNewPrivileges`, `ProtectSystem`, `ProtectHome`, `PrivateTmp`).
 - **Dockerfile Linter & Container Security Auditor**: Analyze Dockerfiles offline for multi-stage builds, root user exposure warnings, unpinned `:latest` tags, package manager cache cleanup (`--no-cache`), and layer caching order.
 - **Apache .htaccess Linter & Rewrite Validator**: Validate Apache `.htaccess` directives offline, check `RewriteEngine On`, parse `RewriteCond` expressions, validate `RewriteRule` flags (`[L]`, `[R=301]`, `[QSA]`, `[NC]`), directory indexing (`Options -Indexes`), and security headers.
@@ -70,7 +74,9 @@
 - **Markdown Text Inspector**: Word, character, and line counts with markdown structural summaries.
 - **HTML to Markdown Converter**: Convert HTML markup into clean, readable GitHub-Flavored Markdown offline.
 
-### 2. Security & Privacy (21 Tools)
+### 2. Security & Privacy (23 Tools)
+- **Bifid Delastelle Fractionated Cipher**: Encrypt and decrypt using Felix Delastelle's classical Bifid fractionated transposition cipher with Polybius coordinate interleaving and custom block periods.
+- **scrypt (RFC 7914) Memory Cost & Security Sizing**: Calculate exact RAM requirements ($128 \cdot r \cdot N$), CPU iterations, ASIC resistance scores, and mobile compatibility budgets for scrypt key derivation.
 - **Polybius Square 5x5 Matrix Cipher**: Encode and decode text into 2D grid coordinates (1-5, 1-5) using the classical Polybius Square cipher with optional keyword alphabet permutation.
 - **Affine Modular Arithmetic Cipher**: Encrypt, decrypt, and brute-force solve the classical Affine substitution cipher using modular arithmetic $E(x) = (ax + b) \pmod{26}$, $\gcd(a, 26) = 1$ validation, and modular inverse derivation.
 - **Vernam One-Time Pad (OTP) Cipher & Key Generator**: Information-theoretically unbreakable Vernam One-Time Pad cipher with CSPRNG key generator and Shannon perfect secrecy validation.
@@ -93,7 +99,9 @@
 - **Password Strength Evaluator**: Offline entropy calculation, zxcvbn-inspired pattern scoring, crack time estimates, and actionable improvement tips.
 - **UUID / GUID v4 Generator**: Generate single or batch cryptographically random UUID v4 identifiers with uppercase and hyphen toggles.
 
-### 3. Data & Formats (19 Tools)
+### 3. Data & Formats (21 Tools)
+- **Open Location Code (Google Plus Codes) Codec**: Encode latitude/longitude coordinates into Google Plus Codes (Open Location Code / OLC) and decode Plus Codes into geographic bounding boxes offline.
+- **TSV Stream Filter & Aggregator**: Filter and aggregate Tab-Separated Values (TSV) tabular datasets with column-wise statistics (Sum, Mean, Median, Min, Max) and Group-By summaries.
 - **GeoHash Spatial Index Codec**: Encode latitude/longitude coordinates to Geohash spatial index strings, decode to coordinate bounding boxes with resolution errors, and compute 8-neighbor grids.
 - **CBOR Binary Hex Inspector & JSON Converter**: Parse and inspect Concise Binary Object Representation (CBOR / RFC 8949) hex strings into structured JSON, annotated hex breakdowns, and RFC diagnostic notation.
 - **OGC Well-Known Text (WKT) Geometry Parser & GeoJSON Converter**: Parse OGC WKT 2D geometries (POINT, LINESTRING, POLYGON, MULTIPOINT), calculate perimeter/area/bounding boxes, and convert to GeoJSON.
@@ -114,7 +122,10 @@
 - **JSON to CSV Converter**: Flatten JSON object arrays into standard comma-separated tabular data.
 - **CSV Filter, Query & Sort Engine**: Query and filter CSV rows by numeric and text conditions, sort columns, deduplicate, and reshape datasets.
 
-### 4. Math, Science, Finance & Health (31 Tools)
+### 4. Math, Science, Finance & Health (34 Tools)
+- **Ohm's Law, Joule's Power & Resistor Band Solver**: Solve electrical circuits (Voltage, Current, Resistance, Power) using Ohm's Law and Joule's Law given any two known parameters, with 4/5-band resistor color decoding.
+- **Dew Point & Vapor Pressure Calculator**: Calculate meteorological dew point temperature, saturation vapor pressure, and absolute humidity using the Magnus-Tetens approximation with human comfort ratings.
+- **Kepler's 3rd Law & Orbital Mechanics Solver**: Calculate satellite orbital periods, circular velocity, and orbital altitudes using Kepler's Third Law $T^2 = (4\pi^2 / GM) \cdot a^3$ with reference celestial bodies.
 - **Ordinary & Annuity Due Calculator**: Calculate Future Value (FV), Present Value (PV), and Periodic Payment (PMT) for ordinary annuities and annuities due with compounding amortization schedules.
 - **Heat Index & Wind Chill Apparent Temp Calculator**: Calculate apparent "feels-like" temperature using the NOAA Heat Index (Rothfusz equation) and NWS Wind Chill Index with clinical risk categories.
 - **Tsiolkovsky Rocket Propulsion Equation Solver**: Solve the ideal rocket equation $\Delta v = I_{sp} \cdot g_0 \cdot \ln(m_0 / m_f)$ for delta-v, propellant mass, dry mass, or required specific impulse with orbital mission feasibility budgets.
@@ -147,7 +158,9 @@
 - **Compound Interest Calculator**: Future value projections, compound frequencies (daily, monthly, quarterly, annually), and interest earned.
 - **Discount & Sales Tax Calculator**: Calculate final discounted prices with sales tax additions and savings breakdowns.
 
-### 5. Text, Writing & Typography (28 Tools)
+### 5. Text, Writing & Typography (30 Tools)
+- **Jaro-Winkler String Similarity & Distance Engine**: Compute Jaro and Jaro-Winkler similarity metrics, matching windows, transposition counts, and prefix bonuses for record linkage and fuzzy matching.
+- **Atbash Reciprocal Substitution Cipher**: Encrypt and decrypt text using the ancient classical Atbash reciprocal alphabet substitution cipher ($A \leftrightarrow Z$, $B \leftrightarrow Y$) with optional numeric reflection.
 - **Porter Stemmer Morphological Analyzer**: Algorithmic English Porter Stemmer (Steps 1a through 5b) reducing inflected words to morphological base stems for NLP and search indexing.
 - **Caesar Cipher Automated Frequency Breaker**: Automated cryptanalysis of Caesar cipher rotations (1-25) using Chi-squared ($\chi^2$) English letter frequency matching to instantly recover plaintext without a key.
 - **Run-Length Encoding (RLE) Text Compression Engine**: Losslessly compress and decompress repetitive text sequences using Run-Length Encoding (RLE) with compression ratio and run statistics.
@@ -178,7 +191,8 @@
 - **Morse Code Translator & Timing Engine**: Bi-directional translation between text and International Morse Code with ITU-R timing unit calculations.
 - **ASCII Art Banner & Box Generator**: Generate large 5-row block font banners and decorative Unicode box borders (Single, Double, Rounded, ASCII).
 
-### 6. Media, Audio & Acoustics (11 Tools)
+### 6. Media, Audio & Acoustics (12 Tools)
+- **Broadcast Audio LUFS & True Peak Normalizer**: Evaluate audio loudness (ITU-R BS.1770 / EBU R128) across streaming platforms (Spotify, Apple Music, YouTube) to predict normalization gain penalties and inter-sample clipping.
 - **Audio SNR, THD & ENOB Quality Calculator**: Calculate audio Signal-to-Noise Ratio (SNR), Total Harmonic Distortion (THD), Effective Number of Bits (ENOB), and theoretical quantization limits.
 - **Architectural Acoustics Reverberation Time (RT60) Calculator**: Calculate architectural Sabine and Norris-Eyring reverberation times (RT60), room mode absorption, and critical listening distance.
 - **Acoustic Beat & Binaural Frequency Analyzer**: Calculate interference beat frequencies ($|f_1 - f_2|$), carrier frequency, and classify brainwave states (Delta, Theta, Alpha, Beta, Gamma).
@@ -191,7 +205,8 @@
 - **EXIF Metadata & Privacy Inspector**: Decode hidden camera EXIF tags, capture timestamps, device models, and detect GPS privacy leaks in photos.
 - **Offline QR Code Matrix Generator**: Generate 2D QR code binary matrices, ASCII art representations, and SVG vector graphics offline (ISO/IEC 18004).
 
-### 7. Color & Design (9 Tools)
+### 7. Color & Design (10 Tools)
+- **Monochromatic Color Shade & Tint Scale Generator**: Generate stepped monochromatic color scales by mixing base hues with pure White (Tints) and Black (Shades) with relative luminance and WCAG text contrast ratings.
 - **HEX Alpha Color Porter-Duff Blender**: Blend translucent foreground colors over background layers using Porter-Duff "Source Over" compositing in sRGB or linear color spaces with WCAG contrast checks.
 - **CIEDE2000 Color Difference (ΔE00) Calculator**: Calculate perceptual color difference using the official CIEDE2000 (ΔE00) standard and CIE76 with Just Noticeable Difference (JND) rating.
 - **Subtractive & Additive Color Mixer**: Simulate physical pigment subtractive color mixing (CMY/RYB absorption) and digital screen additive RGB light mixing.
@@ -263,7 +278,7 @@ Each execution pass captures an audit log of intermediate execution outputs, ste
 
 ## Automated Testing & Quality
 
-All 180 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
+All 195 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
 
 ```bash
 # Run all unit tests
@@ -271,8 +286,8 @@ All 180 utilities and engine subsystems are verified with automated unit tests c
 ```
 
 **Results:**
-- **423 tests completed**
-- **423 tests passed**
+- **455 tests completed**
+- **455 tests passed**
 - **0 failures, 0 skipped (100% pass rate)**
 
 ---

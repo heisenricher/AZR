@@ -362,7 +362,33 @@ object LocalSearchEngine {
         "snr" to listOf("audio snr, thd & enob quality calculator"),
         "thd" to listOf("audio snr, thd & enob quality calculator"),
         "alpha blend" to listOf("hex alpha color porter-duff blender"),
-        "porter duff" to listOf("hex alpha color porter-duff blender")
+        "porter duff" to listOf("hex alpha color porter-duff blender"),
+        // Phase 13 Synonyms
+        "index advisor" to listOf("sql query index advisor & ddl generator"),
+        "sql index" to listOf("sql query index advisor & ddl generator"),
+        "terraform" to listOf("terraform hcl syntax & security linter"),
+        "hcl" to listOf("terraform hcl syntax & security linter"),
+        "semver range" to listOf("semver range & version solver"),
+        "version range" to listOf("semver range & version solver"),
+        "env linter" to listOf("dotenv (.env) security & syntax linter"),
+        "dotenv" to listOf("dotenv (.env) security & syntax linter"),
+        "bifid" to listOf("bifid delastelle fractionated cipher"),
+        "scrypt" to listOf("scrypt (rfc 7914) memory cost & security sizing"),
+        "plus code" to listOf("open location code (google plus codes) codec"),
+        "olc" to listOf("open location code (google plus codes) codec"),
+        "tsv" to listOf("tsv stream filter & aggregator"),
+        "tsv filter" to listOf("tsv stream filter & aggregator"),
+        "ohms law" to listOf("ohm's law, joule's power & resistor band solver"),
+        "resistor code" to listOf("ohm's law, joule's power & resistor band solver"),
+        "dew point" to listOf("dew point & vapor pressure calculator"),
+        "kepler" to listOf("kepler's 3rd law & orbital mechanics solver"),
+        "orbital period" to listOf("kepler's 3rd law & orbital mechanics solver"),
+        "jaro winkler" to listOf("jaro-winkler string similarity & distance engine"),
+        "atbash" to listOf("atbash reciprocal substitution cipher"),
+        "lufs" to listOf("broadcast audio lufs & true peak normalizer"),
+        "loudness" to listOf("broadcast audio lufs & true peak normalizer"),
+        "shades" to listOf("monochromatic color shade & tint scale generator"),
+        "tints" to listOf("monochromatic color shade & tint scale generator")
     )
 
     fun search(query: String, tools: List<Tool<*, *>> = ToolRegistry.getAllTools()): List<SearchResultItem> {

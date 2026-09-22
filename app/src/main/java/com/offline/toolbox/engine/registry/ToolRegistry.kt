@@ -189,6 +189,23 @@ import com.offline.toolbox.tools.text.CaesarBruteForceBreakerTool
 import com.offline.toolbox.tools.media.SnrAudioCalculatorTool
 import com.offline.toolbox.tools.color.ColorHexAlphaBlenderTool
 
+// Phase 13 - The Bicentennial Preparation Expansion (180 -> 195)
+import com.offline.toolbox.tools.developer.SqlIndexAdvisorTool
+import com.offline.toolbox.tools.developer.TerraformHclValidatorTool
+import com.offline.toolbox.tools.developer.SemverRangeSolverTool
+import com.offline.toolbox.tools.developer.EnvFileSecurityLinterTool
+import com.offline.toolbox.tools.security.BifidCipherTool
+import com.offline.toolbox.tools.security.ScryptCostEstimatorTool
+import com.offline.toolbox.tools.data.OpenLocationCodeTool
+import com.offline.toolbox.tools.data.TsvFilterAggregateTool
+import com.offline.toolbox.tools.math.OhmsLawPowerTool
+import com.offline.toolbox.tools.math.DewPointRelativeHumidityTool
+import com.offline.toolbox.tools.math.KeplerOrbitalPeriodTool
+import com.offline.toolbox.tools.text.JaroWinklerDistanceTool
+import com.offline.toolbox.tools.text.AtbashCipherTool
+import com.offline.toolbox.tools.media.LufsLoudnessMeterTool
+import com.offline.toolbox.tools.color.ColorShadeTintGeneratorTool
+
 /**
  * Central registry that indexes all available offline utilities.
  * Adding a new tool is fully decoupled: just implement [Tool] and add to this registry.
@@ -497,6 +514,23 @@ object ToolRegistry {
         register(CaesarBruteForceBreakerTool())
         register(SnrAudioCalculatorTool())
         register(ColorHexAlphaBlenderTool())
+
+        // Phase 13 - The Bicentennial Preparation Expansion
+        register(SqlIndexAdvisorTool())
+        register(TerraformHclValidatorTool())
+        register(SemverRangeSolverTool())
+        register(EnvFileSecurityLinterTool())
+        register(BifidCipherTool())
+        register(ScryptCostEstimatorTool())
+        register(OpenLocationCodeTool())
+        register(TsvFilterAggregateTool())
+        register(OhmsLawPowerTool())
+        register(DewPointRelativeHumidityTool())
+        register(KeplerOrbitalPeriodTool())
+        register(JaroWinklerDistanceTool())
+        register(AtbashCipherTool())
+        register(LufsLoudnessMeterTool())
+        register(ColorShadeTintGeneratorTool())
     }
 
     fun register(tool: Tool<*, *>) {

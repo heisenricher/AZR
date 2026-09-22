@@ -251,6 +251,22 @@ import com.offline.toolbox.tools.text.PorterStemmerTool
 import com.offline.toolbox.tools.text.CaesarBruteForceBreakerTool
 import com.offline.toolbox.tools.media.SnrAudioCalculatorTool
 import com.offline.toolbox.tools.color.ColorHexAlphaBlenderTool
+// Phase 13 Tools
+import com.offline.toolbox.tools.developer.SqlIndexAdvisorTool
+import com.offline.toolbox.tools.developer.TerraformHclValidatorTool
+import com.offline.toolbox.tools.developer.SemverRangeSolverTool
+import com.offline.toolbox.tools.developer.EnvFileSecurityLinterTool
+import com.offline.toolbox.tools.security.BifidCipherTool
+import com.offline.toolbox.tools.security.ScryptCostEstimatorTool
+import com.offline.toolbox.tools.data.OpenLocationCodeTool
+import com.offline.toolbox.tools.data.TsvFilterAggregateTool
+import com.offline.toolbox.tools.math.OhmsLawPowerTool
+import com.offline.toolbox.tools.math.DewPointRelativeHumidityTool
+import com.offline.toolbox.tools.math.KeplerOrbitalPeriodTool
+import com.offline.toolbox.tools.text.JaroWinklerDistanceTool
+import com.offline.toolbox.tools.text.AtbashCipherTool
+import com.offline.toolbox.tools.media.LufsLoudnessMeterTool
+import com.offline.toolbox.tools.color.ColorShadeTintGeneratorTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -2259,6 +2275,142 @@ fun ToolRunnerScreen(
             }
             is ColorHexAlphaBlenderTool -> {
                 ColorHexAlphaBlenderUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            // Phase 13 Tools
+            is SqlIndexAdvisorTool -> {
+                SqlIndexAdvisorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is TerraformHclValidatorTool -> {
+                TerraformHclValidatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SemverRangeSolverTool -> {
+                SemverRangeSolverUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is EnvFileSecurityLinterTool -> {
+                EnvFileSecurityLinterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BifidCipherTool -> {
+                BifidCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ScryptCostEstimatorTool -> {
+                ScryptCostEstimatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is OpenLocationCodeTool -> {
+                OpenLocationCodeUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is TsvFilterAggregateTool -> {
+                TsvFilterAggregateUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is OhmsLawPowerTool -> {
+                OhmsLawPowerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is DewPointRelativeHumidityTool -> {
+                DewPointRelativeHumidityUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is KeplerOrbitalPeriodTool -> {
+                KeplerOrbitalPeriodUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is JaroWinklerDistanceTool -> {
+                JaroWinklerDistanceUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is AtbashCipherTool -> {
+                AtbashCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is LufsLoudnessMeterTool -> {
+                LufsLoudnessMeterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorShadeTintGeneratorTool -> {
+                ColorShadeTintGeneratorUI(
                     onResultUpdated = { report, summary ->
                         outputText = report
                         executionSummary = summary
