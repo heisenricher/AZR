@@ -267,6 +267,12 @@ import com.offline.toolbox.tools.text.JaroWinklerDistanceTool
 import com.offline.toolbox.tools.text.AtbashCipherTool
 import com.offline.toolbox.tools.media.LufsLoudnessMeterTool
 import com.offline.toolbox.tools.color.ColorShadeTintGeneratorTool
+// Phase 14 Tools
+import com.offline.toolbox.tools.developer.GitCommitMessageLinterTool
+import com.offline.toolbox.tools.security.PlayfairCipherTool
+import com.offline.toolbox.tools.data.GreatCircleDistanceTool
+import com.offline.toolbox.tools.math.ResistorEquivalentCircuitTool
+import com.offline.toolbox.tools.media.SvgPathDataInspectorTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -2411,6 +2417,52 @@ fun ToolRunnerScreen(
             }
             is ColorShadeTintGeneratorTool -> {
                 ColorShadeTintGeneratorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            // Phase 14 Tools
+            is GitCommitMessageLinterTool -> {
+                GitCommitMessageLinterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is PlayfairCipherTool -> {
+                PlayfairCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is GreatCircleDistanceTool -> {
+                GreatCircleDistanceUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ResistorEquivalentCircuitTool -> {
+                ResistorEquivalentCircuitUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SvgPathDataInspectorTool -> {
+                SvgPathDataInspectorUI(
                     onResultUpdated = { report, summary ->
                         outputText = report
                         executionSummary = summary

@@ -259,5 +259,26 @@ class LocalSearchEngineTest {
         val shadeResults = LocalSearchEngine.search("shades")
         assertTrue("Searching 'shades' should find Color shade tint tool", shadeResults.any { it.tool.metadata.id == "color_shade_tint_generator_tool" })
     }
+
+    @Test
+    fun testPhase14BicentennialApexRegistryAndAliases() {
+        val all = ToolRegistry.getAllTools()
+        assertTrue("Total registered tools should be at least 200 (currently ${all.size})", all.size >= 200)
+
+        val commitResults = LocalSearchEngine.search("commit")
+        assertTrue("Searching 'commit' should find Conventional Commits linter", commitResults.any { it.tool.metadata.id == "git_commit_message_linter_tool" })
+
+        val playfairResults = LocalSearchEngine.search("playfair")
+        assertTrue("Searching 'playfair' should find Playfair cipher", playfairResults.any { it.tool.metadata.id == "playfair_cipher_tool" })
+
+        val gcResults = LocalSearchEngine.search("great circle")
+        assertTrue("Searching 'great circle' should find Great Circle distance tool", gcResults.any { it.tool.metadata.id == "great_circle_distance_tool" })
+
+        val resistorResults = LocalSearchEngine.search("resistor network")
+        assertTrue("Searching 'resistor network' should find Resistor network circuit tool", resistorResults.any { it.tool.metadata.id == "resistor_equivalent_circuit_tool" })
+
+        val svgResults = LocalSearchEngine.search("svg path")
+        assertTrue("Searching 'svg path' should find SVG path inspector", svgResults.any { it.tool.metadata.id == "svg_path_data_inspector_tool" })
+    }
 }
 

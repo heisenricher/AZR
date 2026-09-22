@@ -1,8 +1,8 @@
 # AZR — Offline Android Utility Toolbox
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
-[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-455%20Passed-brightgreen.svg)](#automated-testing--quality)
-[![Tools Count](https://img.shields.io/badge/Utilities-195%20Tools-blue.svg)](#utility-catalog-195-tools)
+[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-469%20Passed-brightgreen.svg)](#automated-testing--quality)
+[![Tools Count](https://img.shields.io/badge/Utilities-200%20Tools-blue.svg)](#utility-catalog-200-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
 
@@ -12,20 +12,21 @@
 
 ## Key Highlights
 
-- **195 Production-Grade Utilities**: The 195 Tools Milestone (Phase 13 — The Bicentennial Preparation) spanning SQL query index advising & DDL generation, Terraform HCL syntax & secret linting, SemVer range constraint solving, Dotenv (.env) security leak auditing, Felix Delastelle's Bifid fractionated cipher, scrypt (RFC 7914) memory cost & ASIC sizing, Open Location Code (Google Plus Codes) geocoding, TSV tabular stream filtering & group-by aggregation, Ohm's & Joule's Law circuit solving with resistor color codes, Magnus-Tetens dew point & vapor pressure thermodynamics, Kepler's 3rd Law orbital mechanics, Jaro-Winkler string similarity metrics, Atbash classical reciprocal substitution ciphers, Broadcast audio LUFS & true peak normalization (ITU-R BS.1770 / EBU R128), and Monochromatic stepped color shade & tint scale generation with WCAG text contrast ratings.
+- **200 Production-Grade Utilities**: The Monumental Bicentennial Apex (Phase 14 — 200 Utilities Milestone) spanning Conventional Commits 1.0.0 git message linting, Wheatstone-Playfair digram matrix ciphers, Spherical Haversine & WGS-84 Vincenty geodesic distance/bearing calculators, Resistor network & voltage divider circuit solvers with E12/E24 matching, SVG path data inspection & Android VectorDrawable XML conversion, SQL query index advising & DDL generation, Terraform HCL syntax & secret linting, SemVer range constraint solving, Dotenv (.env) security leak auditing, Felix Delastelle's Bifid fractionated cipher, scrypt (RFC 7914) memory cost & ASIC sizing, Open Location Code (Google Plus Codes) geocoding, TSV tabular stream filtering & group-by aggregation, Ohm's & Joule's Law circuit solving with resistor color codes, Magnus-Tetens dew point & vapor pressure thermodynamics, Kepler's 3rd Law orbital mechanics, Jaro-Winkler string similarity metrics, Atbash classical reciprocal substitution ciphers, Broadcast audio LUFS & true peak normalization (ITU-R BS.1770 / EBU R128), and Monochromatic stepped color shade & tint scale generation with WCAG text contrast ratings.
 - **Multi-Tool Pipeline Chaining Engine (`PipelineEngine`)**: Execute multi-step sequential transformations (e.g. `Clean -> Case Convert -> Base64 -> Hash`) in a single atomic pass with intermediate audit trails.
 - **Zero Network Guarantee**: Absolutely **NO** `android.permission.INTERNET` in `AndroidManifest.xml`. No telemetry, no cloud analytics, no remote SDKs.
-- **On-Device Cryptography**: Felix Delastelle's Bifid fractionated cipher, scrypt (RFC 7914) memory-hard cost sizing, classical coordinate ciphers (Polybius Square, Affine modular arithmetic), automated Caesar frequency cryptanalysis, BIP-39 mnemonic seed entropy verification, Vernam One-Time Pad cipher with CSPRNG key generation, RFC 9106 Argon2 memory/time cost sizing, RFC 7638 JWK SHA-256 thumbprints, OpenSSH public key SHA256/MD5 fingerprints, RFC 5869 HKDF Key Derivation, Polyalphabetic Vigenère with Index of Coincidence, Shamir's $(k, n)$ threshold secret sharing over $GF(256)$, RFC 6238 TOTP 2FA tokens, Diceware entropy, AES-256-GCM / CBC encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC, and multi-algorithm hashing.
+- **On-Device Cryptography**: Wheatstone-Playfair digram substitution cipher, Felix Delastelle's Bifid fractionated cipher, scrypt (RFC 7914) memory-hard cost sizing, classical coordinate ciphers (Polybius Square, Affine modular arithmetic), automated Caesar frequency cryptanalysis, BIP-39 mnemonic seed entropy verification, Vernam One-Time Pad cipher with CSPRNG key generation, RFC 9106 Argon2 memory/time cost sizing, RFC 7638 JWK SHA-256 thumbprints, OpenSSH public key SHA256/MD5 fingerprints, RFC 5869 HKDF Key Derivation, Polyalphabetic Vigenère with Index of Coincidence, Shamir's $(k, n)$ threshold secret sharing over $GF(256)$, RFC 6238 TOTP 2FA tokens, Diceware entropy, AES-256-GCM / CBC encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC, and multi-algorithm hashing.
 - **Advanced Perceptual Contrast & Colorimetry**: Stepped monochromatic shade/tint palettes with WCAG contrast evaluation, Porter-Duff "Source Over" alpha compositing, CIEDE2000 ($\Delta E_{00}$) perceptual difference standard, physical pigment subtractive color mixing (CMY/RYB absorption), screen additive RGB blending, modern light-adapted APCA (WCAG 3.0), and Planckian locus blackbody Kelvin-to-sRGB chromaticity approximations.
 - **OWASP Path Traversal Defenses**: Built-in protection against Zip Slip and directory traversal attacks during local archive inspection and extraction.
-- **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 195 utilities.
-- **455 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
+- **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 200 utilities.
+- **469 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
 
 ---
 
-## Utility Catalog (195 Tools)
+## Utility Catalog (200 Tools)
 
-### 1. Developer & Network Tools (47 Tools)
+### 1. Developer & Network Tools (48 Tools)
+- **Git Commit Message Linter & Conventional Commits Validator**: Validate commit messages offline against Conventional Commits 1.0.0 specification (type, scope, subject, body, footer, BREAKING CHANGE), enforce 50/72 character length budget, check imperative mood verbs, and generate compliant commit messages.
 - **SQL Query Index Advisor & DDL Generator**: Analyze SQL queries (WHERE, JOIN, ORDER BY, GROUP BY) to suggest optimal composite B-Tree indexes, detect unindexed full table scans, and generate CREATE INDEX statements.
 - **Terraform HCL Syntax & Security Linter**: Validate HashiCorp HCL syntax, audit Terraform resource blocks, check unpinned provider versions, detect hardcoded plaintext credentials, and score security posture.
 - **SemVer Range & Version Solver**: Resolve and test semantic version ranges (^, ~, >=, <=, ||, wildcards, hyphen ranges) against candidate release versions to determine highest resolved dependencies.
@@ -74,7 +75,8 @@
 - **Markdown Text Inspector**: Word, character, and line counts with markdown structural summaries.
 - **HTML to Markdown Converter**: Convert HTML markup into clean, readable GitHub-Flavored Markdown offline.
 
-### 2. Security & Privacy (23 Tools)
+### 2. Security & Privacy (24 Tools)
+- **Playfair Classical Digram Cipher**: Encrypt and decrypt text using Charles Wheatstone and Lyon Playfair's classical 5x5 Polybius digram substitution cipher with custom keyword alphabet generation, I/J cell merging, duplicate doublet padding, and rectangular/row/column shift rules.
 - **Bifid Delastelle Fractionated Cipher**: Encrypt and decrypt using Felix Delastelle's classical Bifid fractionated transposition cipher with Polybius coordinate interleaving and custom block periods.
 - **scrypt (RFC 7914) Memory Cost & Security Sizing**: Calculate exact RAM requirements ($128 \cdot r \cdot N$), CPU iterations, ASIC resistance scores, and mobile compatibility budgets for scrypt key derivation.
 - **Polybius Square 5x5 Matrix Cipher**: Encode and decode text into 2D grid coordinates (1-5, 1-5) using the classical Polybius Square cipher with optional keyword alphabet permutation.
@@ -99,7 +101,8 @@
 - **Password Strength Evaluator**: Offline entropy calculation, zxcvbn-inspired pattern scoring, crack time estimates, and actionable improvement tips.
 - **UUID / GUID v4 Generator**: Generate single or batch cryptographically random UUID v4 identifiers with uppercase and hyphen toggles.
 
-### 3. Data & Formats (21 Tools)
+### 3. Data & Formats (22 Tools)
+- **Great Circle Distance & Geodesic Bearing Engine**: Calculate true geographic distance between two coordinates using Spherical Earth Haversine ($R = 6,371.01\text{ km}$) and high-precision WGS-84 Vincenty ellipsoidal inverse geodesic formula, with initial/final azimuth bearing, 16-point compass heading, and geodesic midpoint.
 - **Open Location Code (Google Plus Codes) Codec**: Encode latitude/longitude coordinates into Google Plus Codes (Open Location Code / OLC) and decode Plus Codes into geographic bounding boxes offline.
 - **TSV Stream Filter & Aggregator**: Filter and aggregate Tab-Separated Values (TSV) tabular datasets with column-wise statistics (Sum, Mean, Median, Min, Max) and Group-By summaries.
 - **GeoHash Spatial Index Codec**: Encode latitude/longitude coordinates to Geohash spatial index strings, decode to coordinate bounding boxes with resolution errors, and compute 8-neighbor grids.
@@ -122,7 +125,8 @@
 - **JSON to CSV Converter**: Flatten JSON object arrays into standard comma-separated tabular data.
 - **CSV Filter, Query & Sort Engine**: Query and filter CSV rows by numeric and text conditions, sort columns, deduplicate, and reshape datasets.
 
-### 4. Math, Science, Finance & Health (34 Tools)
+### 4. Math, Science, Finance & Health (35 Tools)
+- **Resistor Network & Equivalent Circuit Solver**: Calculate equivalent resistance for series ($\sum R_i$) and parallel ($\frac{1}{\sum 1/R_i}$) networks, solve unloaded and loaded voltage dividers with droop compensation, and find closest standard E12/E24 decade component values.
 - **Ohm's Law, Joule's Power & Resistor Band Solver**: Solve electrical circuits (Voltage, Current, Resistance, Power) using Ohm's Law and Joule's Law given any two known parameters, with 4/5-band resistor color decoding.
 - **Dew Point & Vapor Pressure Calculator**: Calculate meteorological dew point temperature, saturation vapor pressure, and absolute humidity using the Magnus-Tetens approximation with human comfort ratings.
 - **Kepler's 3rd Law & Orbital Mechanics Solver**: Calculate satellite orbital periods, circular velocity, and orbital altitudes using Kepler's Third Law $T^2 = (4\pi^2 / GM) \cdot a^3$ with reference celestial bodies.
@@ -191,7 +195,8 @@
 - **Morse Code Translator & Timing Engine**: Bi-directional translation between text and International Morse Code with ITU-R timing unit calculations.
 - **ASCII Art Banner & Box Generator**: Generate large 5-row block font banners and decorative Unicode box borders (Single, Double, Rounded, ASCII).
 
-### 6. Media, Audio & Acoustics (12 Tools)
+### 6. Media, Audio & Acoustics (13 Tools)
+- **SVG Path Data Inspector & VectorDrawable Converter**: Tokenize SVG path data strings (`d="..."`) for 10 path commands (M, L, H, V, C, S, Q, T, A, Z), calculate 2D bounding boxes, compute path length approximations, and convert SVG paths directly to production-ready Android VectorDrawable XML offline.
 - **Broadcast Audio LUFS & True Peak Normalizer**: Evaluate audio loudness (ITU-R BS.1770 / EBU R128) across streaming platforms (Spotify, Apple Music, YouTube) to predict normalization gain penalties and inter-sample clipping.
 - **Audio SNR, THD & ENOB Quality Calculator**: Calculate audio Signal-to-Noise Ratio (SNR), Total Harmonic Distortion (THD), Effective Number of Bits (ENOB), and theoretical quantization limits.
 - **Architectural Acoustics Reverberation Time (RT60) Calculator**: Calculate architectural Sabine and Norris-Eyring reverberation times (RT60), room mode absorption, and critical listening distance.
@@ -278,7 +283,7 @@ Each execution pass captures an audit log of intermediate execution outputs, ste
 
 ## Automated Testing & Quality
 
-All 195 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
+All 200 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
 
 ```bash
 # Run all unit tests
@@ -286,8 +291,8 @@ All 195 utilities and engine subsystems are verified with automated unit tests c
 ```
 
 **Results:**
-- **455 tests completed**
-- **455 tests passed**
+- **469 tests completed**
+- **469 tests passed**
 - **0 failures, 0 skipped (100% pass rate)**
 
 ---

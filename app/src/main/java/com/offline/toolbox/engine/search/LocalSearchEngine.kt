@@ -388,7 +388,24 @@ object LocalSearchEngine {
         "lufs" to listOf("broadcast audio lufs & true peak normalizer"),
         "loudness" to listOf("broadcast audio lufs & true peak normalizer"),
         "shades" to listOf("monochromatic color shade & tint scale generator"),
-        "tints" to listOf("monochromatic color shade & tint scale generator")
+        "tints" to listOf("monochromatic color shade & tint scale generator"),
+        // Phase 14 - The Bicentennial Apex (195 -> 200)
+        "commit" to listOf("conventional commits 1.0.0 linter & validator"),
+        "conventional commit" to listOf("conventional commits 1.0.0 linter & validator"),
+        "commit linter" to listOf("conventional commits 1.0.0 linter & validator"),
+        "playfair" to listOf("wheatstone-playfair digraph substitution cipher"),
+        "great circle" to listOf("great-circle geodesic distance & bearing navigator"),
+        "haversine" to listOf("great-circle geodesic distance & bearing navigator"),
+        "bearing" to listOf("great-circle geodesic distance & bearing navigator"),
+        "vincenty" to listOf("great-circle geodesic distance & bearing navigator"),
+        "resistor network" to listOf("resistor network (series/parallel) & voltage divider solver"),
+        "voltage divider" to listOf("resistor network (series/parallel) & voltage divider solver"),
+        "resistor series" to listOf("resistor network (series/parallel) & voltage divider solver"),
+        "resistor parallel" to listOf("resistor network (series/parallel) & voltage divider solver"),
+        "svg" to listOf("svg path data inspector & android vector converter"),
+        "svg path" to listOf("svg path data inspector & android vector converter"),
+        "vectordrawable" to listOf("svg path data inspector & android vector converter"),
+        "vector drawable" to listOf("svg path data inspector & android vector converter")
     )
 
     fun search(query: String, tools: List<Tool<*, *>> = ToolRegistry.getAllTools()): List<SearchResultItem> {
