@@ -204,6 +204,21 @@ import com.offline.toolbox.tools.text.ReadabilityScoreTool
 import com.offline.toolbox.tools.text.TextJustifierTool
 import com.offline.toolbox.tools.color.ColorTemperatureTool
 import com.offline.toolbox.tools.media.AudioDecibelCalculatorTool
+import com.offline.toolbox.tools.developer.HarAnalyzerTool
+import com.offline.toolbox.tools.developer.PrometheusMetricParserTool
+import com.offline.toolbox.tools.developer.SshKeyFingerprintTool
+import com.offline.toolbox.tools.developer.JsonWebKeyTool
+import com.offline.toolbox.tools.security.Argon2ParameterCalculatorTool
+import com.offline.toolbox.tools.security.RailFenceCipherTool
+import com.offline.toolbox.tools.data.GeoJsonValidatorTool
+import com.offline.toolbox.tools.data.ProtobufVarintDecoderTool
+import com.offline.toolbox.tools.math.BlackScholesOptionPricerTool
+import com.offline.toolbox.tools.math.DopplerEffectCalculatorTool
+import com.offline.toolbox.tools.math.RomanNumeralsAdvancedTool
+import com.offline.toolbox.tools.text.SoundexMetaphoneTool
+import com.offline.toolbox.tools.text.TextStatisticsNgramTool
+import com.offline.toolbox.tools.media.BeatsBinauralAcousticTool
+import com.offline.toolbox.tools.color.ColorHarmonyMixingTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -1805,6 +1820,141 @@ fun ToolRunnerScreen(
             }
             is AudioDecibelCalculatorTool -> {
                 AudioDecibelCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is HarAnalyzerTool -> {
+                HarAnalyzerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is PrometheusMetricParserTool -> {
+                PrometheusMetricParserUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SshKeyFingerprintTool -> {
+                SshKeyFingerprintUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is JsonWebKeyTool -> {
+                JsonWebKeyUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is Argon2ParameterCalculatorTool -> {
+                Argon2ParameterCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is RailFenceCipherTool -> {
+                RailFenceCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is GeoJsonValidatorTool -> {
+                GeoJsonValidatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ProtobufVarintDecoderTool -> {
+                ProtobufVarintDecoderUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BlackScholesOptionPricerTool -> {
+                BlackScholesOptionPricerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is DopplerEffectCalculatorTool -> {
+                DopplerEffectCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is RomanNumeralsAdvancedTool -> {
+                RomanNumeralsAdvancedUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SoundexMetaphoneTool -> {
+                SoundexMetaphoneUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is TextStatisticsNgramTool -> {
+                TextStatisticsNgramUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is BeatsBinauralAcousticTool -> {
+                BeatsBinauralAcousticUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorHarmonyMixingTool -> {
+                ColorHarmonyMixingUI(
                     onResultUpdated = { report, summary ->
                         outputText = report
                         executionSummary = summary

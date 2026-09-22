@@ -139,6 +139,21 @@ import com.offline.toolbox.tools.text.ReadabilityScoreTool
 import com.offline.toolbox.tools.text.TextJustifierTool
 import com.offline.toolbox.tools.color.ColorTemperatureTool
 import com.offline.toolbox.tools.media.AudioDecibelCalculatorTool
+import com.offline.toolbox.tools.developer.HarAnalyzerTool
+import com.offline.toolbox.tools.developer.PrometheusMetricParserTool
+import com.offline.toolbox.tools.developer.SshKeyFingerprintTool
+import com.offline.toolbox.tools.developer.JsonWebKeyTool
+import com.offline.toolbox.tools.security.Argon2ParameterCalculatorTool
+import com.offline.toolbox.tools.security.RailFenceCipherTool
+import com.offline.toolbox.tools.data.GeoJsonValidatorTool
+import com.offline.toolbox.tools.data.ProtobufVarintDecoderTool
+import com.offline.toolbox.tools.math.BlackScholesOptionPricerTool
+import com.offline.toolbox.tools.math.DopplerEffectCalculatorTool
+import com.offline.toolbox.tools.math.RomanNumeralsAdvancedTool
+import com.offline.toolbox.tools.text.SoundexMetaphoneTool
+import com.offline.toolbox.tools.text.TextStatisticsNgramTool
+import com.offline.toolbox.tools.media.BeatsBinauralAcousticTool
+import com.offline.toolbox.tools.color.ColorHarmonyMixingTool
 
 /**
  * Central registry that indexes all available offline utilities.
@@ -375,6 +390,34 @@ object ToolRegistry {
         // Media, Color & Acoustics
         register(ColorTemperatureTool())
         register(AudioDecibelCalculatorTool())
+
+        // --- Phase 10: The Centurion Milestone (150 Tools Milestone) ---
+        // Developer & Cloud/DevOps
+        register(HarAnalyzerTool())
+        register(PrometheusMetricParserTool())
+        register(SshKeyFingerprintTool())
+        register(JsonWebKeyTool())
+
+        // Security & Cryptography
+        register(Argon2ParameterCalculatorTool())
+        register(RailFenceCipherTool())
+
+        // Data & Formats
+        register(GeoJsonValidatorTool())
+        register(ProtobufVarintDecoderTool())
+
+        // Math, Finance & Science
+        register(BlackScholesOptionPricerTool())
+        register(DopplerEffectCalculatorTool())
+        register(RomanNumeralsAdvancedTool())
+
+        // Text & Linguistics
+        register(SoundexMetaphoneTool())
+        register(TextStatisticsNgramTool())
+
+        // Media, Color & Acoustics
+        register(BeatsBinauralAcousticTool())
+        register(ColorHarmonyMixingTool())
     }
 
     fun register(tool: Tool<*, *>) {

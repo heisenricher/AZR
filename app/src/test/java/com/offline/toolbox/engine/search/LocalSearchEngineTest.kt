@@ -79,4 +79,31 @@ class LocalSearchEngineTest {
         val refinanceResults = LocalSearchEngine.search("refinance")
         assertTrue("Searching 'refinance' should find Loan Refinance tool", refinanceResults.any { it.tool.metadata.id == "loan_refinance_comparator_tool" })
     }
+
+    @Test
+    fun testPhase10CenturionMilestoneRegistryAndAliases() {
+        val all = ToolRegistry.getAllTools()
+        assertTrue("Total registered tools should be at least 150 (currently ${all.size})", all.size >= 150)
+
+        val harResults = LocalSearchEngine.search("har")
+        assertTrue("Searching 'har' should find HAR analyzer", harResults.any { it.tool.metadata.id == "har_analyzer_tool" })
+
+        val promResults = LocalSearchEngine.search("prometheus")
+        assertTrue("Searching 'prometheus' should find Prometheus parser", promResults.any { it.tool.metadata.id == "prometheus_metric_parser_tool" })
+
+        val argonResults = LocalSearchEngine.search("argon2")
+        assertTrue("Searching 'argon2' should find Argon2 calculator", argonResults.any { it.tool.metadata.id == "argon2_parameter_calculator_tool" })
+
+        val geoResults = LocalSearchEngine.search("geojson")
+        assertTrue("Searching 'geojson' should find GeoJSON validator", geoResults.any { it.tool.metadata.id == "geo_json_validator_tool" })
+
+        val bsResults = LocalSearchEngine.search("black scholes")
+        assertTrue("Searching 'black scholes' should find Black-Scholes tool", bsResults.any { it.tool.metadata.id == "black_scholes_option_pricer_tool" })
+
+        val soundexResults = LocalSearchEngine.search("soundex")
+        assertTrue("Searching 'soundex' should find Soundex comparator", soundexResults.any { it.tool.metadata.id == "soundex_metaphone_tool" })
+
+        val binauralResults = LocalSearchEngine.search("binaural")
+        assertTrue("Searching 'binaural' should find Binaural beats analyzer", binauralResults.any { it.tool.metadata.id == "beats_binaural_acoustic_tool" })
+    }
 }

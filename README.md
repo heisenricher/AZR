@@ -1,8 +1,8 @@
 # AZR — Offline Android Utility Toolbox
 
 [![100% Offline](https://img.shields.io/badge/Privacy-100%25%20Offline-success.svg)](#privacy--zero-network-guarantee)
-[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-326%20Passed-brightgreen.svg)](#automated-testing--quality)
-[![Tools Count](https://img.shields.io/badge/Utilities-135%20Tools-blue.svg)](#utility-catalog-135-tools)
+[![Tests Passing](https://img.shields.io/badge/Unit%20Tests-358%20Passed-brightgreen.svg)](#automated-testing--quality)
+[![Tools Count](https://img.shields.io/badge/Utilities-150%20Tools-blue.svg)](#utility-catalog-150-tools)
 [![Android](https://img.shields.io/badge/Android-SDK%2026--35-green.svg)](#technical-stack)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-purple.svg)](#user-interface--design-system)
 
@@ -12,20 +12,24 @@
 
 ## Key Highlights
 
-- **135 Production-Grade Utilities**: The Apex Zenith milestone spanning Developer/DevOps, Cryptography, Data Structures, Linear Algebra, Acoustics, Typographic Typesetting, Colorimetry, and Physics.
+- **150 Production-Grade Utilities**: The Centurion Apex milestone spanning Developer/DevOps, Cryptography, Data Structures, Linear Algebra, Acoustics, Neuro-Acoustics, Typographic Typesetting, Colorimetry, Financial Quantitative Derivatives, and Physics.
 - **Multi-Tool Pipeline Chaining Engine (`PipelineEngine`)**: Execute multi-step sequential transformations (e.g. `Clean -> Case Convert -> Base64 -> Hash`) in a single atomic pass with intermediate audit trails.
 - **Zero Network Guarantee**: Absolutely **NO** `android.permission.INTERNET` in `AndroidManifest.xml`. No telemetry, no cloud analytics, no remote SDKs.
-- **On-Device Cryptography**: RFC 5869 HKDF Key Derivation, Polyalphabetic Vigenère with Index of Coincidence, Shamir's $(k, n)$ threshold secret sharing over $GF(256)$, RFC 6238 TOTP 2FA tokens, Diceware entropy, AES-256-GCM / CBC encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC, and multi-algorithm hashing.
-- **Advanced Perceptual Contrast & Colorimetry**: Modern light-adapted APCA (WCAG 3.0) and Planckian locus blackbody Kelvin-to-sRGB chromaticity approximations.
+- **On-Device Cryptography**: RFC 9106 Argon2 memory/time cost sizing, RFC 7638 JWK SHA-256 thumbprints, OpenSSH public key SHA256/MD5 fingerprints, RFC 5869 HKDF Key Derivation, Polyalphabetic Vigenère with Index of Coincidence, Shamir's $(k, n)$ threshold secret sharing over $GF(256)$, RFC 6238 TOTP 2FA tokens, Diceware entropy, AES-256-GCM / CBC encryption, RSA Key Pair generation (PKCS#8 & X.509 PEM), Keyed HMAC, and multi-algorithm hashing.
+- **Advanced Perceptual Contrast & Colorimetry**: Physical pigment subtractive color mixing (CMY/RYB absorption), screen additive RGB blending, modern light-adapted APCA (WCAG 3.0), and Planckian locus blackbody Kelvin-to-sRGB chromaticity approximations.
 - **OWASP Path Traversal Defenses**: Built-in protection against Zip Slip and directory traversal attacks during local archive inspection and extraction.
-- **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 135 utilities.
-- **326 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
+- **High-Performance In-Memory Search Engine**: Sub-millisecond fuzzy search with synonym dictionaries and alias expansion across all 150 utilities.
+- **358 Automated Unit Tests**: 100% test pass rate covering algorithms, edge cases, cryptographic vectors, and exploit defenses.
 
 ---
 
-## Utility Catalog (135 Tools)
+## Utility Catalog (150 Tools)
 
-### 1. Developer & Network Tools (31 Tools)
+### 1. Developer & Network Tools (35 Tools)
+- **HTTP Archive (.har) Offline Log Analyzer**: Parse HTTP Archive (.har) logs offline, inspect payload sizes, analyze waterfall timings (DNS, connect, TTFB, receive), and rank slowest API requests.
+- **Prometheus & OpenTelemetry Metric Exposition Parser**: Parse standard Prometheus exposition text format, validate counter/gauge/histogram/summary syntax, and inspect metric label series.
+- **SSH Public Key Inspector & Fingerprint Calculator**: Inspect OpenSSH public keys (ed25519, rsa, ecdsa), extract bit lengths and comments, and compute SHA-256 and MD5 fingerprints.
+- **JWK Inspector & RFC 7638 Thumbprint Calculator**: Inspect RSA, EC, OKP, and oct JSON Web Keys (JWK) and calculate deterministic RFC 7638 canonical SHA-256 thumbprints.
 - **cURL Command Parser & Code Generator**: Parse offline cURL shell commands into HTTP components and generate equivalent Kotlin, Python, and JavaScript snippets.
 - **BGP Autonomous System Number (ASN) Directory**: Lookup offline BGP Autonomous System Numbers, convert between ASPLAIN and ASDOT notations, and classify public/private ranges.
 - **GitIgnore Template & Multi-Stack Generator**: Generate standardized `.gitignore` files combining curated rules for Android, Kotlin, Gradle, Node.js, Python, IDEs, and OS environments.
@@ -58,7 +62,9 @@
 - **Markdown Text Inspector**: Word, character, and line counts with markdown structural summaries.
 - **HTML to Markdown Converter**: Convert HTML markup into clean, readable GitHub-Flavored Markdown offline.
 
-### 2. Security & Privacy (15 Tools)
+### 2. Security & Privacy (17 Tools)
+- **Argon2 Parameter Cost & Security Calculator**: Calculate recommended memory size ($m$), iterations ($t$), and parallelism ($p$) for Argon2id/i/d per RFC 9106.
+- **Rail Fence (Zig-Zag) Cipher & Visualizer**: Encode and decode classical Rail Fence transposition ciphers with arbitrary rail depths and ASCII matrix path visualization.
 - **HKDF Key Derivation Function (RFC 5869)**: Derive cryptographically strong subkeys from master keying material using RFC 5869 HMAC-Extract and HMAC-Expand (SHA-256 and SHA-512).
 - **Vigenère Polyalphabetic Cipher & Cryptanalysis**: Encrypt or decrypt text using the classical Vigenère cipher and compute Index of Coincidence (IoC) for key length estimation.
 - **Shamir's Secret Sharing Threshold Cryptography**: Information-theoretically secure $(k, n)$ threshold secret splitting and reconstruction over Galois Field $GF(256)$.
@@ -75,7 +81,9 @@
 - **Password Strength Evaluator**: Offline entropy calculation, zxcvbn-inspired pattern scoring, crack time estimates, and actionable improvement tips.
 - **UUID / GUID v4 Generator**: Generate single or batch cryptographically random UUID v4 identifiers with uppercase and hyphen toggles.
 
-### 3. Data & Formats (13 Tools)
+### 3. Data & Formats (15 Tools)
+- **GeoJSON Validator & Geometry Inspector**: Validate RFC 7946 GeoJSON geometries, calculate bounding boxes [minX, minY, maxX, maxY], and compute geometric centroids.
+- **Protobuf Varint & ZigZag Decoder**: Decode Protocol Buffers variable-length integers (LEB128 Varint) and signed ZigZag integers (sint32, sint64) with bitwise explanations.
 - **CSV to JSON Schema Inferer**: Infer standard Draft-07 JSON Schema specifications from tabular CSV data with automatic type detection (integer, number, boolean, date-time, string).
 - **Binary Search Tree (BST) Builder & Visualizer**: Build a binary search tree from numbers, analyze height, check AVL balance, and generate in/pre/post-order traversals and ASCII tree diagrams.
 - **XML <-> JSON Bi-Directional Converter**: Convert XML documents to structured JSON and JSON objects to valid XML with attribute and hierarchy preservation.
@@ -90,7 +98,10 @@
 - **JSON to CSV Converter**: Flatten JSON object arrays into standard comma-separated tabular data.
 - **CSV Filter, Query & Sort Engine**: Query and filter CSV rows by numeric and text conditions, sort columns, deduplicate, and reshape datasets.
 
-### 4. Math, Science, Finance & Health (22 Tools)
+### 4. Math, Science, Finance & Health (25 Tools)
+- **Black-Scholes Option Pricing & Greeks Calculator**: Compute theoretical European Call and Put option prices and primary risk Greeks (Delta, Gamma, Theta, Vega, Rho).
+- **Doppler Effect (Acoustic & Relativistic) Calculator**: Compute acoustic Doppler frequency shifts (temperature-adjusted sound speed) and relativistic optical Doppler shifts ($\beta = v/c$).
+- **Extended Roman Numerals (Vinculum Notation) Converter**: Convert integers up to 3,999,999 to and from Roman numerals using the Vinculum overline notation ($\overline{\text{V}}, \overline{\text{X}}, \overline{\text{M}}$).
 - **Loan Refinance & Breakeven Comparator**: Evaluate mortgage/loan refinancing offers, monthly payment reduction, closing cost breakeven horizons, and lifetime interest savings.
 - **Trigonometric & Hyperbolic Function Engine**: Precise circular (sin, cos, tan, sec, csc, cot) and hyperbolic (sinh, cosh, tanh) trigonometry across Degrees, Radians, and Gradians.
 - **CODATA Fundamental Scientific Constants**: Offline reference directory of 23+ fundamental physical, chemical, electromagnetic, and astronomical constants with SI units.
@@ -114,7 +125,9 @@
 - **Compound Interest Calculator**: Future value projections, compound frequencies (daily, monthly, quarterly, annually), and interest earned.
 - **Discount & Sales Tax Calculator**: Calculate final discounted prices with sales tax additions and savings breakdowns.
 
-### 5. Text, Writing & Typography (22 Tools)
+### 5. Text, Writing & Typography (24 Tools)
+- **Soundex & Metaphone Phonetic Name Comparator**: Generate American Soundex (e.g. S530) and Philips Metaphone phonetic keys for names and evaluate phonetic similarity.
+- **N-Gram Frequency & Lexical Diversity Analyzer**: Tokenize prose into unigrams, bigrams, and trigrams, compute frequency rankings, and calculate Type-Token Ratio (TTR).
 - **Readability & Grade Level Analyzer**: Analyze text comprehension and grade level using Flesch Reading Ease, Flesch-Kincaid, Gunning Fog, and Coleman-Liau indexes.
 - **Typographic Full Text Justifier**: Format and align paragraphs to exact column widths with typographic space distribution (book/typeset justification).
 - **Markdown Table Formatter & Padded Aligner**: Format raw tabular data, CSV, TSV, or misaligned pipes into perfectly padded, aligned GitHub-Flavored Markdown tables.
@@ -139,7 +152,8 @@
 - **Morse Code Translator & Timing Engine**: Bi-directional translation between text and International Morse Code with ITU-R timing unit calculations.
 - **ASCII Art Banner & Box Generator**: Generate large 5-row block font banners and decorative Unicode box borders (Single, Double, Rounded, ASCII).
 
-### 6. Media, Audio & Acoustics (8 Tools)
+### 6. Media, Audio & Acoustics (9 Tools)
+- **Acoustic Beat & Binaural Frequency Analyzer**: Calculate interference beat frequencies ($|f_1 - f_2|$), carrier frequency, and classify brainwave states (Delta, Theta, Alpha, Beta, Gamma).
 - **Acoustic Decibel & Signal Gain Engine**: Calculate Sound Pressure Level (dB SPL), audio signal voltage gain (dBu, dBV, dBm), and inverse-square distance loss.
 - **Musical Interval & Acoustic Harmony Calculator**: Compute 12-TET vs Just Intonation acoustic frequencies, harmonic ratios, and cents discrepancy.
 - **Metronome & BPM Tempo Tapper**: Tap tempo calculator with Italian musical markings (Allegro, Andante, Presto) and note division intervals in ms.
@@ -149,7 +163,8 @@
 - **EXIF Metadata & Privacy Inspector**: Decode hidden camera EXIF tags, capture timestamps, device models, and detect GPS privacy leaks in photos.
 - **Offline QR Code Matrix Generator**: Generate 2D QR code binary matrices, ASCII art representations, and SVG vector graphics offline (ISO/IEC 18004).
 
-### 7. Color & Design (6 Tools)
+### 7. Color & Design (7 Tools)
+- **Subtractive & Additive Color Mixer**: Simulate physical pigment subtractive color mixing (CMY/RYB absorption) and digital screen additive RGB light mixing.
 - **Color Temperature (Kelvin) to RGB Converter**: Convert Correlated Color Temperature (1,000K to 40,000K) to sRGB chromaticity using Planckian blackbody locus approximations.
 - **WCAG 3 APCA & Perceptual Contrast Engine**: Evaluate color contrast using the Advanced Perceptual Contrast Algorithm (APCA / WCAG 3) alongside WCAG 2.1 AA/AAA metrics.
 - **Color Vision Deficiency & Accessibility Simulator**: Simulate Protanopia, Deuteranopia, Tritanopia, and Achromatopsia via Vienot & Brettel matrices.
@@ -218,7 +233,7 @@ Each execution pass captures an audit log of intermediate execution outputs, ste
 
 ## Automated Testing & Quality
 
-All 135 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
+All 150 utilities and engine subsystems are verified with automated unit tests covering edge cases, boundary values, security sanitization, and cryptographic vectors:
 
 ```bash
 # Run all unit tests
@@ -226,8 +241,8 @@ All 135 utilities and engine subsystems are verified with automated unit tests c
 ```
 
 **Results:**
-- **326 tests completed**
-- **326 tests passed**
+- **358 tests completed**
+- **358 tests passed**
 - **0 failures, 0 skipped (100% pass rate)**
 
 ---
