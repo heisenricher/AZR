@@ -336,7 +336,33 @@ object LocalSearchEngine {
         "rt60" to listOf("acoustic reverberation time (rt60) calculator"),
         "reverb" to listOf("acoustic reverberation time (rt60) calculator"),
         "ciede2000" to listOf("ciede2000 color difference (δe00) calculator"),
-        "delta e" to listOf("ciede2000 color difference (δe00) calculator")
+        "delta e" to listOf("ciede2000 color difference (δe00) calculator"),
+        // Phase 12 Synonyms
+        "systemd" to listOf("systemd service unit validator & security linter"),
+        "service unit" to listOf("systemd service unit validator & security linter"),
+        "dockerfile" to listOf("dockerfile security & best-practices linter"),
+        "docker" to listOf("dockerfile security & best-practices linter"),
+        "htaccess" to listOf("apache .htaccess rewrite & security validator"),
+        "apache" to listOf("apache .htaccess rewrite & security validator"),
+        "k8s" to listOf("kubernetes yaml resource & security inspector"),
+        "kubernetes" to listOf("kubernetes yaml resource & security inspector"),
+        "polybius" to listOf("polybius square 5x5 matrix cipher"),
+        "affine" to listOf("affine modular arithmetic cipher"),
+        "geohash" to listOf("geohash spatial index codec"),
+        "cbor" to listOf("cbor binary hex inspector & json converter"),
+        "annuity" to listOf("ordinary & annuity due calculator"),
+        "heat index" to listOf("heat index & wind chill apparent temp calculator"),
+        "wind chill" to listOf("heat index & wind chill apparent temp calculator"),
+        "rocket" to listOf("tsiolkovsky rocket propulsion equation solver"),
+        "delta-v" to listOf("tsiolkovsky rocket propulsion equation solver"),
+        "stemmer" to listOf("porter stemmer morphological analyzer"),
+        "porter" to listOf("porter stemmer morphological analyzer"),
+        "caesar brute" to listOf("caesar cipher automated frequency breaker"),
+        "chi-squared" to listOf("caesar cipher automated frequency breaker"),
+        "snr" to listOf("audio snr, thd & enob quality calculator"),
+        "thd" to listOf("audio snr, thd & enob quality calculator"),
+        "alpha blend" to listOf("hex alpha color porter-duff blender"),
+        "porter duff" to listOf("hex alpha color porter-duff blender")
     )
 
     fun search(query: String, tools: List<Tool<*, *>> = ToolRegistry.getAllTools()): List<SearchResultItem> {

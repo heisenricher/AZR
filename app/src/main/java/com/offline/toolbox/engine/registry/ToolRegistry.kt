@@ -172,6 +172,23 @@ import com.offline.toolbox.tools.text.LevenshteinMatrixVisualizerTool
 import com.offline.toolbox.tools.media.ReverbRt60AcousticTool
 import com.offline.toolbox.tools.color.ColorDeltaE2000Tool
 
+// Phase 12 - The 180 Tools Milestone (165 -> 180)
+import com.offline.toolbox.tools.developer.SystemdServiceUnitValidatorTool
+import com.offline.toolbox.tools.developer.DockerfileLinterTool
+import com.offline.toolbox.tools.developer.ApacheHtaccessValidatorTool
+import com.offline.toolbox.tools.developer.KubeYamlResourceInspectorTool
+import com.offline.toolbox.tools.security.PolybiusSquareCipherTool
+import com.offline.toolbox.tools.security.AffineCipherTool
+import com.offline.toolbox.tools.data.GeoHashCodecTool
+import com.offline.toolbox.tools.data.CborHexInspectorTool
+import com.offline.toolbox.tools.math.AnnuityCalculatorTool
+import com.offline.toolbox.tools.math.HeatIndexWindChillTool
+import com.offline.toolbox.tools.math.TsiolkovskyRocketEquationTool
+import com.offline.toolbox.tools.text.PorterStemmerTool
+import com.offline.toolbox.tools.text.CaesarBruteForceBreakerTool
+import com.offline.toolbox.tools.media.SnrAudioCalculatorTool
+import com.offline.toolbox.tools.color.ColorHexAlphaBlenderTool
+
 /**
  * Central registry that indexes all available offline utilities.
  * Adding a new tool is fully decoupled: just implement [Tool] and add to this registry.
@@ -463,6 +480,23 @@ object ToolRegistry {
         // Media & Color
         register(ReverbRt60AcousticTool())
         register(ColorDeltaE2000Tool())
+
+        // Phase 12 - The 180 Tools Milestone
+        register(SystemdServiceUnitValidatorTool())
+        register(DockerfileLinterTool())
+        register(ApacheHtaccessValidatorTool())
+        register(KubeYamlResourceInspectorTool())
+        register(PolybiusSquareCipherTool())
+        register(AffineCipherTool())
+        register(GeoHashCodecTool())
+        register(CborHexInspectorTool())
+        register(AnnuityCalculatorTool())
+        register(HeatIndexWindChillTool())
+        register(TsiolkovskyRocketEquationTool())
+        register(PorterStemmerTool())
+        register(CaesarBruteForceBreakerTool())
+        register(SnrAudioCalculatorTool())
+        register(ColorHexAlphaBlenderTool())
     }
 
     fun register(tool: Tool<*, *>) {

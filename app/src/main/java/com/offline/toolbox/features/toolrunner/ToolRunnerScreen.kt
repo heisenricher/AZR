@@ -235,6 +235,22 @@ import com.offline.toolbox.tools.text.RunLengthEncodingTool
 import com.offline.toolbox.tools.text.LevenshteinMatrixVisualizerTool
 import com.offline.toolbox.tools.media.ReverbRt60AcousticTool
 import com.offline.toolbox.tools.color.ColorDeltaE2000Tool
+// Phase 12 Tools
+import com.offline.toolbox.tools.developer.SystemdServiceUnitValidatorTool
+import com.offline.toolbox.tools.developer.DockerfileLinterTool
+import com.offline.toolbox.tools.developer.ApacheHtaccessValidatorTool
+import com.offline.toolbox.tools.developer.KubeYamlResourceInspectorTool
+import com.offline.toolbox.tools.security.PolybiusSquareCipherTool
+import com.offline.toolbox.tools.security.AffineCipherTool
+import com.offline.toolbox.tools.data.GeoHashCodecTool
+import com.offline.toolbox.tools.data.CborHexInspectorTool
+import com.offline.toolbox.tools.math.AnnuityCalculatorTool
+import com.offline.toolbox.tools.math.HeatIndexWindChillTool
+import com.offline.toolbox.tools.math.TsiolkovskyRocketEquationTool
+import com.offline.toolbox.tools.text.PorterStemmerTool
+import com.offline.toolbox.tools.text.CaesarBruteForceBreakerTool
+import com.offline.toolbox.tools.media.SnrAudioCalculatorTool
+import com.offline.toolbox.tools.color.ColorHexAlphaBlenderTool
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -2107,6 +2123,142 @@ fun ToolRunnerScreen(
             }
             is ColorDeltaE2000Tool -> {
                 ColorDeltaE2000UI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            // Phase 12 Tools
+            is SystemdServiceUnitValidatorTool -> {
+                SystemdServiceUnitValidatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is DockerfileLinterTool -> {
+                DockerfileLinterUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ApacheHtaccessValidatorTool -> {
+                ApacheHtaccessValidatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is KubeYamlResourceInspectorTool -> {
+                KubeYamlResourceInspectorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is PolybiusSquareCipherTool -> {
+                PolybiusSquareCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is AffineCipherTool -> {
+                AffineCipherUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is GeoHashCodecTool -> {
+                GeoHashCodecUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is CborHexInspectorTool -> {
+                CborHexInspectorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is AnnuityCalculatorTool -> {
+                AnnuityCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is HeatIndexWindChillTool -> {
+                HeatIndexWindChillUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is TsiolkovskyRocketEquationTool -> {
+                TsiolkovskyRocketEquationUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is PorterStemmerTool -> {
+                PorterStemmerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is CaesarBruteForceBreakerTool -> {
+                CaesarBruteForceBreakerUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is SnrAudioCalculatorTool -> {
+                SnrAudioCalculatorUI(
+                    onResultUpdated = { report, summary ->
+                        outputText = report
+                        executionSummary = summary
+                        errorMessage = null
+                    }
+                )
+            }
+            is ColorHexAlphaBlenderTool -> {
+                ColorHexAlphaBlenderUI(
                     onResultUpdated = { report, summary ->
                         outputText = report
                         executionSummary = summary

@@ -157,4 +157,55 @@ class LocalSearchEngineTest {
         val deltaEResults = LocalSearchEngine.search("ciede2000")
         assertTrue("Searching 'ciede2000' should find CIEDE2000 color tool", deltaEResults.any { it.tool.metadata.id == "color_delta_e_2000_tool" })
     }
+
+    @Test
+    fun testPhase12ToolAliasesAndTotalCount() {
+        val all = ToolRegistry.getAllTools()
+        assertTrue("Total registered tools should be at least 180 (currently ${all.size})", all.size >= 180)
+
+        val systemdResults = LocalSearchEngine.search("systemd")
+        assertTrue("Searching 'systemd' should find systemd unit validator", systemdResults.any { it.tool.metadata.id == "systemd_service_unit_validator_tool" })
+
+        val dockerResults = LocalSearchEngine.search("dockerfile")
+        assertTrue("Searching 'dockerfile' should find Dockerfile linter", dockerResults.any { it.tool.metadata.id == "dockerfile_linter_tool" })
+
+        val htaccessResults = LocalSearchEngine.search("htaccess")
+        assertTrue("Searching 'htaccess' should find htaccess validator", htaccessResults.any { it.tool.metadata.id == "apache_htaccess_validator_tool" })
+
+        val k8sResults = LocalSearchEngine.search("k8s")
+        assertTrue("Searching 'k8s' should find K8s inspector", k8sResults.any { it.tool.metadata.id == "kube_yaml_resource_inspector_tool" })
+
+        val polyResults = LocalSearchEngine.search("polybius")
+        assertTrue("Searching 'polybius' should find Polybius cipher", polyResults.any { it.tool.metadata.id == "polybius_square_cipher_tool" })
+
+        val affineResults = LocalSearchEngine.search("affine")
+        assertTrue("Searching 'affine' should find Affine cipher", affineResults.any { it.tool.metadata.id == "affine_cipher_tool" })
+
+        val geoResults = LocalSearchEngine.search("geohash")
+        assertTrue("Searching 'geohash' should find GeoHash codec", geoResults.any { it.tool.metadata.id == "geohash_codec_tool" })
+
+        val cborResults = LocalSearchEngine.search("cbor")
+        assertTrue("Searching 'cbor' should find CBOR inspector", cborResults.any { it.tool.metadata.id == "cbor_hex_inspector_tool" })
+
+        val annuityResults = LocalSearchEngine.search("annuity")
+        assertTrue("Searching 'annuity' should find Annuity calculator", annuityResults.any { it.tool.metadata.id == "annuity_calculator_tool" })
+
+        val heatResults = LocalSearchEngine.search("heat index")
+        assertTrue("Searching 'heat index' should find Heat Index tool", heatResults.any { it.tool.metadata.id == "heat_index_wind_chill_tool" })
+
+        val rocketResults = LocalSearchEngine.search("rocket")
+        assertTrue("Searching 'rocket' should find Rocket propulsion tool", rocketResults.any { it.tool.metadata.id == "tsiolkovsky_rocket_equation_tool" })
+
+        val stemResults = LocalSearchEngine.search("stemmer")
+        assertTrue("Searching 'stemmer' should find Porter stemmer", stemResults.any { it.tool.metadata.id == "porter_stemmer_tool" })
+
+        val caesarResults = LocalSearchEngine.search("caesar brute")
+        assertTrue("Searching 'caesar brute' should find Caesar breaker", caesarResults.any { it.tool.metadata.id == "caesar_brute_force_breaker_tool" })
+
+        val snrResults = LocalSearchEngine.search("snr")
+        assertTrue("Searching 'snr' should find Audio SNR tool", snrResults.any { it.tool.metadata.id == "snr_audio_calculator_tool" })
+
+        val blendResults = LocalSearchEngine.search("alpha blend")
+        assertTrue("Searching 'alpha blend' should find Color alpha blender", blendResults.any { it.tool.metadata.id == "color_hex_alpha_blender_tool" })
+    }
 }
